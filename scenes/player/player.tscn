@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_q7fv6"]
 radius = 5.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 up_direction = Vector2(0, 1)
 script = ExtResource("1_n23bc")
 metadata/_edit_vertical_guides_ = []
