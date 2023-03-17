@@ -7,7 +7,7 @@
 radius = 5.0
 
 [node name="BasicEnemy" type="CharacterBody2D"]
-light_mask = 0
+collision_layer = 0
 script = ExtResource("1_kvj3n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
