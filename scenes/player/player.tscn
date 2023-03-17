@@ -16,6 +16,7 @@ metadata/_edit_vertical_guides_ = []
 [node name="AbilityManager" type="Node" parent="."]
 
 [node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("2_btw2w")]
+sword_ability = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_08mt5")
