@@ -10,8 +10,6 @@ func _ready():
 
 
 func on_timer_timeout():
-	
-	
 	var enemies = get_tree().get_nodes_in_group('enemy')
 	var player = get_tree().get_first_node_in_group('player') as Node2D
 	if !player: return
@@ -28,6 +26,13 @@ func on_timer_timeout():
 		return a_distance < b_distance
 	)
 	
+	# instantiate sword
 	var sword_instance = sword_ability.instantiate() as Node2D
-	sword_instance.global_position = enemies[0].global_position
 	player.get_parent().add_child(sword_instance)
+	
+	# position sword
+	sword_instance.global_position = enemies[0].global_position
+	sword_instance.global_position += Vector2.RIGHT.rotated(randf_range(0, TAU)) * 4
+	
+	var enemy_direction = enemies[0].global_position - sword_instance.global_position
+	sword_instance.rotation = enemy_direction.angle()
