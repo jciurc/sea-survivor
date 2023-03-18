@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0w4ic56vi18b"]
 
-[ext_resource type="Texture2D" uid="uid://djb1whs45ygek" path="res://assets/items/sword.png" id="1_w7d63"]
+[ext_resource type="Texture2D" uid="uid://djb1whs45ygek" path="res://assets/items/sword.png" id="1_nfytq"]
 
 [sub_resource type="Animation" id="Animation_fg8lg"]
 resource_name = "swing"
@@ -114,7 +114,7 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_w7d63")
+texture = ExtResource("1_nfytq")
 offset = Vector2(0, -4)
 
 [node name="Area2D" type="Area2D" parent="."]
