@@ -1,23 +1,32 @@
 extends Node
 
-@export var bullet_scene: PackedScene
-@export var initial_bullet_count: int
 
-const SPAWN_RADIUS = 20
+@export var bullet_scene: PackedScene
+
+const SPAWN_RADIUS = 5
+const bullet_count = 20
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if !bullet_scene: return
-	$"../FirerateTimer".connect('timeout', spawn_bullet)
+	$"../Firerate".connect('timeout', on_fire_timeout)
 
 
-func spawn_bullet():
+func on_fire_timeout():
 	var player = get_tree().get_first_node_in_group('player') as Node2D
 	if !player: return
 	
-	var bullet_instance = bullet_scene.instantiate() as Node2D
-	bullet_instance.global_position = player.global_position
-	player.get_parent().add_child(bullet_instance)
+	for i in range(0, bullet_count):
+		var bullet_instance = bullet_scene.instantiate() as Node2D
+		var spawn_direction = Vector2.UP.rotated((TAU / bullet_count) * i)
+		
+		print(bullet_count)
+		print(Vector2.UP, ', ', Vector2.UP.rotated(i), ', ', (TAU / bullet_count))
+		bullet_instance.global_position = player.global_position + (spawn_direction * SPAWN_RADIUS)
+		player.get_parent().add_child(bullet_instance)
+			
+	
 
 	
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
