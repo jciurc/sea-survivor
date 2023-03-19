@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://djklb1dnjljcu"]
+[gd_scene load_steps=6 format=3 uid="uid://djklb1dnjljcu"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
+[ext_resource type="PackedScene" uid="uid://dqnahknwqtmpt" path="res://scenes/ability_manager.tscn" id="2_4bonh"]
 [ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_o0kkg"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 
@@ -14,9 +15,9 @@ up_direction = Vector2(0, 1)
 script = ExtResource("1_53hyh")
 metadata/_edit_vertical_guides_ = []
 
-[node name="AbilityManager" type="Node" parent="."]
+[node name="AbillityManager" parent="." instance=ExtResource("2_4bonh")]
 
-[node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("2_o0kkg")]
+[node name="SwordAbilityController" parent="AbillityManager" instance=ExtResource("2_o0kkg")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 4.76837e-07)

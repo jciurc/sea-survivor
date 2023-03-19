@@ -1,12 +1,15 @@
 extends Node
 
-@export var bullet_entity: PackedScene
+@export var bullet_scene: PackedScene
+var player: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if !bullet_scene: return
+	$"../Timer".connect('timeout', spawn_bullet)
+	player = get_tree().get_first_node_in_group('player') as Node2D
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func spawn_bullet():
+	var bullet_instance = bullet_scene.instantiate() as Node2D
+	bullet_instance.global_position = player.global_position
+	player.get_parent().add_child(bullet_instance)
