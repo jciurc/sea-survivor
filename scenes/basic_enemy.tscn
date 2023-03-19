@@ -10,7 +10,8 @@ radius = 12.0
 radius = 5.0
 
 [node name="BasicEnemy" type="CharacterBody2D" groups=["enemy"]]
-collision_layer = 0
+collision_layer = 8
+collision_mask = 9
 script = ExtResource("1_6t370")
 
 [node name="Area2D" type="Area2D" parent="."]
