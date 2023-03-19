@@ -1,1 +1,1 @@
-# 2DSurvivors
+# Sea Survivors
