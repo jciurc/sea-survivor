@@ -5,10 +5,11 @@
 
 [node name="AbillityManager" type="Node"]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+[node name="FirerateTimer" type="Timer" parent="."]
+wait_time = 0.4
 autostart = true
 
 [node name="BulletSpawner" type="Node" parent="."]
 script = ExtResource("1_lk1g6")
 bullet_scene = ExtResource("2_fl0q1")
+initial_bullet_count = 20

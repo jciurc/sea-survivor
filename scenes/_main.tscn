@@ -1,16 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb0lfk7ad2r5l"]
+[gd_scene load_steps=5 format=3 uid="uid://bb0lfk7ad2r5l"]
 
 [ext_resource type="PackedScene" uid="uid://dkc3ab5lychvo" path="res://scenes/enemy_manager.tscn" id="1_36b2j"]
 [ext_resource type="PackedScene" uid="uid://drylnfc420aaq" path="res://scenes/game_camera.tscn" id="2_1bh08"]
-[ext_resource type="PackedScene" uid="uid://dqnahknwqtmpt" path="res://scenes/ability_manager.tscn" id="2_n5qst"]
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="3_q02oo"]
 [ext_resource type="PackedScene" uid="uid://djklb1dnjljcu" path="res://scenes/player.tscn" id="4_eb3j4"]
 
 [node name="Main" type="Node"]
 
 [node name="EnemyManager" parent="." instance=ExtResource("1_36b2j")]
-
-[node name="AbillityManager" parent="." instance=ExtResource("2_n5qst")]
 
 [node name="GameCamera" parent="." instance=ExtResource("2_1bh08")]
 
