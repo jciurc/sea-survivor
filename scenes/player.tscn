@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
 [ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_o0kkg"]
-[ext_resource type="Texture2D" uid="uid://c7modr4e5nluq" path="res://assets/characters/player.png" id="3_sj4nj"]
+[ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q7fv6"]
 radius = 5.0
@@ -19,9 +19,9 @@ metadata/_edit_vertical_guides_ = []
 [node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("2_o0kkg")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 6)
-texture = ExtResource("3_sj4nj")
-offset = Vector2(0, -8)
+position = Vector2(0, 4.76837e-07)
+texture = ExtResource("3_fnrlf")
+offset = Vector2(0, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_q7fv6")
