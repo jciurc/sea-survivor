@@ -12,4 +12,4 @@ func _phsyics_process(delta):
 
 
 func on_lifetime_timeout():
-	
+	$AnimationPlayer.play('Despawn')
