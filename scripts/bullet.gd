@@ -7,8 +7,9 @@ func _ready():
 	$Lifetime.connect('timeout', on_lifetime_timeout)
 
 
-func _phsyics_process(delta): 
+func _physics_process(delta): 
 	position += transform.x * speed
+	print(position)
 
 
 func on_lifetime_timeout():
