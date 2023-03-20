@@ -4,7 +4,7 @@ extends Node
 @export var bullet_scene: PackedScene
 @export var bullet_count = 20
 
-const SPAWN_RADIUS = 5
+const SPAWN_RADIUS = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
