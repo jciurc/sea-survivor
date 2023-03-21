@@ -8,7 +8,7 @@ func _ready():
 
 
 func _process(delta): 
-	move_and_slide()
+	position += transform.x * speed
 
 
 func on_lifetime_timeout():
