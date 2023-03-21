@@ -6,7 +6,6 @@
 [node name="AbillityManager" type="Node"]
 
 [node name="Firerate" type="Timer" parent="."]
-wait_time = 0.4
 autostart = true
 
 [node name="BulletSpawner" type="Node" parent="."]

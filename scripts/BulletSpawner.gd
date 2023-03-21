@@ -2,7 +2,7 @@ extends Node
 
 
 @export var bullet_scene: PackedScene
-@export var bullet_count = 20
+@export var bullet_count = 40
 
 const SPAWN_RADIUS = 2
 

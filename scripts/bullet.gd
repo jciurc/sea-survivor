@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 50.0
+var speed = 100.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,4 +13,5 @@ func _process(delta):
 
 
 func on_lifetime_timeout():
+	print('asdfasdf')
 	$AnimationPlayer.play('Despawn')
