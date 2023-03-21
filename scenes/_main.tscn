@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dkc3ab5lychvo" path="res://scenes/enemy_manager.tscn" id="1_36b2j"]
 [ext_resource type="PackedScene" uid="uid://drylnfc420aaq" path="res://scenes/game_camera.tscn" id="2_1bh08"]
-[ext_resource type="PackedScene" uid="uid://bekl5svv0d34f" path="res://scenes/arena_time_manager.tscn" id="2_jyk8q"]
+[ext_resource type="PackedScene" path="res://scenes/arena_time_manager.tscn" id="2_jyk8q"]
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="3_q02oo"]
 [ext_resource type="PackedScene" uid="uid://djklb1dnjljcu" path="res://scenes/player.tscn" id="4_eb3j4"]
-[ext_resource type="PackedScene" uid="uid://cpj5grohvasd7" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
-[ext_resource type="PackedScene" uid="uid://1e5nyn3miryd" path="res://scenes/experience_vial.tscn" id="7_rwux0"]
+[ext_resource type="PackedScene" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
+[ext_resource type="PackedScene" uid="uid://cnbwasygj3hli" path="res://scenes/experience_vial.tscn" id="7_rwux0"]
 
 [node name="Main" type="Node"]
 
