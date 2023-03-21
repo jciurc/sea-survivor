@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 5.0
+var speed = 50.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,7 +8,8 @@ func _ready():
 
 
 func _process(delta): 
-	position += transform.x * speed
+	var direction = Vector2.RIGHT.rotated(rotation)
+	position += direction * delta * speed
 
 
 func on_lifetime_timeout():
