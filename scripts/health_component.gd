@@ -10,8 +10,8 @@ func _ready():
 	current_health = max_health
 
 
-func damage(damge: float):
-	current_health = max(current_health - damage, 0)
+func damage(amount: float):
+	current_health = max(current_health - amount, 0)
 	if current_health == 0: 
 		died.emit()	
 		owner.queue_free()
