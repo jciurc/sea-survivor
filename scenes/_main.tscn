@@ -28,4 +28,19 @@ layer_0/tile_data = PackedInt32Array(196610, 0, 4, 262146, 0, 4, 327687, 0, 4, 2
 position = Vector2(313, 201)
 
 [node name="ExperienceVial" parent="." instance=ExtResource("7_rwux0")]
-position = Vector2(244, 186)
+position = Vector2(271, 128)
+
+[node name="ExperienceVial2" parent="." instance=ExtResource("7_rwux0")]
+position = Vector2(204, 194)
+
+[node name="ExperienceVial3" parent="." instance=ExtResource("7_rwux0")]
+position = Vector2(189, 274)
+
+[node name="ExperienceVial4" parent="." instance=ExtResource("7_rwux0")]
+position = Vector2(399, 221)
+
+[node name="ExperienceVial5" parent="." instance=ExtResource("7_rwux0")]
+position = Vector2(376, 283)
+
+[node name="ExperienceVial6" parent="." instance=ExtResource("7_rwux0")]
+position = Vector2(376, 126)

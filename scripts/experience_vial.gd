@@ -6,6 +6,6 @@ func _ready():
 	
 	
 func on_area_entered(other_area: Area2D):
-	GameEvents.experience_vial_collected.emit(1)
+	GameEvents.emit_collect(1)
 	queue_free()
 		
