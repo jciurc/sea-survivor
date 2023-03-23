@@ -20,10 +20,10 @@ func on_fire_timeout():
 	for i in range(0, bullet_count):
 		var bullet_instance = bullet_scene.instantiate() as Bullet
 		var spawn_direction = Vector2.UP.rotated((TAU / bullet_count) * i)
+		player.get_parent().add_child(bullet_instance)
 		bullet_instance.global_position = player.global_position + (spawn_direction * SPAWN_RADIUS)
 		bullet_instance.rotation = spawn_direction.angle()
 		bullet_instance.hitbox_component.damage = damage
-		player.get_parent().add_child(bullet_instance)
 		
 
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
