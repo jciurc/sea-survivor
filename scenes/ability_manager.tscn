@@ -1,14 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqnahknwqtmpt"]
 
-[ext_resource type="Script" path="res://scripts/BulletSpawner.gd" id="1_lk1g6"]
+[ext_resource type="Script" path="res://scenes/ability_manager.gd" id="1_yaash"]
 [ext_resource type="PackedScene" uid="uid://pgtw4d63fqgh" path="res://scenes/bullet.tscn" id="2_fl0q1"]
 
 [node name="AbillityManager" type="Node"]
+script = ExtResource("1_yaash")
+bullet_scene = ExtResource("2_fl0q1")
 
 [node name="Firerate" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="BulletSpawner" type="Node" parent="."]
-script = ExtResource("1_lk1g6")
-bullet_scene = ExtResource("2_fl0q1")

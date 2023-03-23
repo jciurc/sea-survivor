@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://pgtw4d63fqgh"]
+[gd_scene load_steps=9 format=3 uid="uid://pgtw4d63fqgh"]
 
 [ext_resource type="Texture2D" uid="uid://bvomk1a4dvnv5" path="res://assets/characters/bullet.png" id="1_bju1c"]
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_tn6be"]
+[ext_resource type="PackedScene" path="res://scenes/hitbox_component.tscn" id="3_itc76"]
 
 [sub_resource type="Animation" id="Animation_h7q20"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/0/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -35,7 +36,7 @@ resource_name = "despawn"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/0/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -77,7 +78,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/0/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -127,9 +128,7 @@ libraries = {
 texture = ExtResource("1_bju1c")
 offset = Vector2(0, 4)
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 0
+[node name="HitboxComponent" parent="." instance=ExtResource("3_itc76")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 shape = SubResource("CircleShape2D_hstbq")

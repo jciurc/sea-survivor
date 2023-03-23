@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjbd2qog01plr"]
+[gd_scene load_steps=2 format=3 uid="uid://be6kkbhwtugt"]
 
-[ext_resource type="Script" path="res://scenes/game_events.gd" id="1_4m2pr"]
+[ext_resource type="Script" path="res://scripts/game_events.gd" id="1_b3ic4"]
 
 [node name="GameEvents" type="Node"]
-script = ExtResource("1_4m2pr")
+script = ExtResource("1_b3ic4")
 
 [connection signal="experience_vial_collected" from="." to="." method="_on_experience_vial_collected"]
