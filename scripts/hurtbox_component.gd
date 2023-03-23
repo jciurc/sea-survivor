@@ -6,8 +6,8 @@ class_name HurtboxComponent
 
 func _ready():
 	area_entered.connect(on_area_entered)
-	
-	
+
+
 func on_area_entered(hitbox_component: HitboxComponent):
 	if not hitbox_component is HitboxComponent: return
 	if !health_component: return

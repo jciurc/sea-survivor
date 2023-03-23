@@ -13,9 +13,9 @@ func _ready():
 func damage(amount: float):
 	current_health = max(current_health - amount, 0)
 	Callable(check_death).call_deferred()
-	
+
 
 func check_death():
-	if current_health == 0: 
-		died.emit()	
+	if current_health == 0:
+		died.emit()
 		owner.queue_free()

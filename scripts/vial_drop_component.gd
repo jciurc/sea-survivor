@@ -7,13 +7,13 @@ extends Node
 
 func _ready():
 	health_component.died.connect(on_died)
-	
-	
+
+
 func on_died():
 	if randf() > drop_percent: return
 	if vial_scene == null: return
 	if not owner is Node2D: return
-	
+
 	var spawn_position = owner.global_position
 	var vial_instance: Node2D = vial_scene.instantiate()
 	owner.get_parent().add_child(vial_instance)

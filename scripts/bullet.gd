@@ -10,7 +10,7 @@ func _ready():
 	$Lifetime.connect('timeout', on_lifetime_timeout)
 
 
-func _process(delta): 
+func _process(delta):
 	var direction = Vector2.RIGHT.rotated(rotation)
 	position += direction * delta * speed
 
