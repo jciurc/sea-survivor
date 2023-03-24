@@ -4,7 +4,7 @@ var current_experience = 0
 
 
 func _ready():
-	GameEvents.experience_vial_collected.connect(increment_experience)
+	GameEvents.experience_vial_collected.connect(on_experience_vial_collected)
 
 
 func increment_experience(number: float):
