@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://binvhveu6ixse" path="res://scenes/ability_upgrade_card.tscn" id="1_e25vh"]
 
 [node name="UpgradeScreen" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_4hn3q")
 upgrade_card_scene = ExtResource("1_e25vh")
 
@@ -13,9 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 
 [node name="CardContainer" type="HBoxContainer" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-mouse_filter = 2
