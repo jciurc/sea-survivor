@@ -21,4 +21,3 @@ func on_level_up(current_level: int):
 		}
 	else :
 		current_upgrades[chosen_upgrade.id]["quantity"] += 1
-	print(current_upgrades)
