@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="4_eb3j4"]
 [ext_resource type="PackedScene" uid="uid://6g8j2f5l0vkh" path="res://scenes/experience_manager.tscn" id="5_d752e"]
 [ext_resource type="PackedScene" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
-[ext_resource type="PackedScene" path="res://scenes/upgrade_manager.tscn" id="6_lvatb"]
+[ext_resource type="PackedScene" uid="uid://b0g3le3e1eeww" path="res://scenes/upgrade_manager.tscn" id="6_lvatb"]
 
 [node name="Main" type="Node"]
 

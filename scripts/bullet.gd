@@ -16,4 +16,4 @@ func _process(delta):
 
 
 func on_lifetime_timeout():
-	$AnimationPlayer.play('Despawn')
+	$AnimationPlayer.play('despawn')

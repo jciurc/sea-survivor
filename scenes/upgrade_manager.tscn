@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bywehp3kxiro3"]
+[gd_scene load_steps=3 format=3 uid="uid://b0g3le3e1eeww"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_manager.gd" id="1_qlgoy"]
 [ext_resource type="Resource" uid="uid://d02bhpurjplp" path="res://resources/firerate.tres" id="2_d6sg3"]

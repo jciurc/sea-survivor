@@ -20,5 +20,5 @@ func on_level_up(current_level: int):
 			'quantity': 1
 		}
 	else :
-		current_upgrades[chosen_upgrade.id]["quality"] += 1
+		current_upgrades[chosen_upgrade.id]["quantity"] += 1
 	print(current_upgrades)
