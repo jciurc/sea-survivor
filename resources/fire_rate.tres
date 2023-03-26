@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_rngoa")
-id = ""
-name = ""
-description = ""
+id = "fire_rate"
+name = "Projectile Fire Rate"
+description = "Increases fire rate by 10%"
