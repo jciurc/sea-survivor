@@ -1,4 +1,5 @@
 extends PanelContainer
+class_name UIAbilityUpgradeCard
 
 @onready var name_label = %NameLabel
 @onready var description_label = %DescriptionLabel
