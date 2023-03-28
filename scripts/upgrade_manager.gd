@@ -21,9 +21,9 @@ func on_level_up(current_level: int):
 
 
 func apply_upgrade(upgrade: AbilityUpgrade):
-	var has_upgrade = upgrade.has(upgrade.id)
+	var has_upgrade = current_upgrades.has(upgrade.id)
 	if !has_upgrade:
-		upgrade[upgrade.id] = {
+		current_upgrades[upgrade.id] = {
 			'resource': upgrade,
 			'quantity': 1
 		}

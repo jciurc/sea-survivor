@@ -10,7 +10,7 @@ var base_wait_time = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	base_wait_time = $Timer.wait_time
+	base_wait_time = $Firerate.wait_time
 	if !bullet_scene: return
 	$Firerate.connect('timeout', on_fire_timeout)
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
@@ -37,5 +37,5 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	if upgrade.id != "firerate": return
 
 	var percent_reduction = current_upgrades["firerate"].quantity * .1
-	$Timer.wait_time = base_wait_time * (1 - percent_reduction)
-	$Timer.start()
+	$Firerate.wait_time = base_wait_time * (1 - percent_reduction)
+	$Firerate.start()
