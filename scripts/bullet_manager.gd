@@ -5,12 +5,15 @@ extends Node
 
 const SPAWN_RADIUS = 2
 var damage = 5
+var base_wait_time = 2
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	base_wait_time = $Timer.wait_time
 	if !bullet_scene: return
 	$Firerate.connect('timeout', on_fire_timeout)
+	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
 func on_fire_timeout():
@@ -28,3 +31,11 @@ func on_fire_timeout():
 
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var spawn_position = player.global_position + (random_direction * SPAWN_RADIUS)
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
+	if upgrade.id != "firerate": return
+
+	var percent_reduction = current_upgrades["firerate"].quantity * .1
+	$Timer.wait_time = base_wait_time * (1 - percent_reduction)
+	$Timer.start()
