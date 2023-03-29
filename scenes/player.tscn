@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://c846i2k5islf1"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
-[ext_resource type="PackedScene" uid="uid://dqnahknwqtmpt" path="res://scenes/bullet_manager.tscn" id="2_4bonh"]
+[ext_resource type="PackedScene" uid="uid://dvfot8umc74gd" path="res://scenes/bullet_manager.tscn" id="2_4bonh"]
+[ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_78vae"]
 [ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_o0kkg"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v6ctv"]
 radius = 36.3456
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lywrr"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_q7fv6"]
-radius = 6.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
@@ -18,17 +20,27 @@ up_direction = Vector2(0, 1)
 script = ExtResource("1_53hyh")
 metadata/_edit_vertical_guides_ = []
 
+[node name="HealthComponent" parent="." instance=ExtResource("2_78vae")]
+max_health = 20.0
+
 [node name="AbillityManager" parent="." instance=ExtResource("2_4bonh")]
 
 [node name="SwordAbilityController" parent="AbillityManager" instance=ExtResource("2_o0kkg")]
 process_mode = 4
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PickupArea2D" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
 shape = SubResource("CircleShape2D_v6ctv")
+
+[node name="CollisionArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D"]
+shape = SubResource("CircleShape2D_lywrr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
