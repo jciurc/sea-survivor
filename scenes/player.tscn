@@ -21,7 +21,6 @@ script = ExtResource("1_53hyh")
 metadata/_edit_vertical_guides_ = []
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_78vae")]
-max_health = 20.0
 
 [node name="AbillityManager" parent="." instance=ExtResource("2_4bonh")]
 
@@ -31,6 +30,26 @@ process_mode = 4
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(32, 6)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -21.0
+offset_right = 16.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+value = 0.5
+show_percentage = false
 
 [node name="PickupArea2D" type="Area2D" parent="."]
 collision_layer = 16
