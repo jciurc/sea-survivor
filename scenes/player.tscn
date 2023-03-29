@@ -1,10 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://c846i2k5islf1"]
+[gd_scene load_steps=11 format=3 uid="uid://c846i2k5islf1"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
 [ext_resource type="PackedScene" uid="uid://dvfot8umc74gd" path="res://scenes/bullet_manager.tscn" id="2_4bonh"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_78vae"]
 [ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_o0kkg"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uem7o"]
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnos5"]
+bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.247059, 0.14902, 0.192157, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v6ctv"]
 radius = 36.3456
@@ -39,19 +50,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -16.0
-offset_top = -21.0
+offset_top = -22.0
 offset_right = 16.0
-offset_bottom = -15.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(16, 3)
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_uem7o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dnos5")
 max_value = 1.0
 value = 0.5
 show_percentage = false
 
 [node name="PickupArea2D" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 0
 
