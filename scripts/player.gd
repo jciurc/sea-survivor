@@ -3,11 +3,14 @@ extends CharacterBody2D
 const MAX_SPEED = 150
 const ACCELERATION_SMOOTHING = 40
 
+@onready var damage_interval_timer = $DamageIntervalTimer
+
 var bodies_currently_colliding = 0;
 
 func _ready():
 	$CollisionArea2D.body_entered.connect(on_body_entered)
 	$CollisionArea2D.body_exited.connect(on_body_exited)
+	damage_interval_timer.timeout.connect(on_damage_interval_timer_timeout)
 
 
 func _process(delta):
@@ -25,9 +28,22 @@ func get_movement_vector():
 	return Vector2(x_movement, y_movement)
 
 
+func check_deal_damage():
+	if !bodies_currently_colliding || not damage_interval_timer.isStopped():
+		return
+
+	$HealthComponent.damage(1)
+	damage_interval_timer.start()
+
+
 func on_body_entered(other_body: Node2D):
 	bodies_currently_colliding += 1
+	check_deal_damage()
 
 
 func on_body_exited(other_body: Node2D):
 	bodies_currently_colliding -= 1
+
+
+func on_damage_interval_timer_timeout():
+	check_deal_damage()
