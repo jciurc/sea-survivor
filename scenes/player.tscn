@@ -31,7 +31,7 @@ process_mode = 4
 wait_time = 0.5
 one_shot = true
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(32, 6)
 anchors_preset = 8
 anchor_left = 0.5
