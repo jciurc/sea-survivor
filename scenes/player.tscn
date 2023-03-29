@@ -28,6 +28,10 @@ max_health = 20.0
 [node name="SwordAbilityController" parent="AbillityManager" instance=ExtResource("2_o0kkg")]
 process_mode = 4
 
+[node name="DamageIntervalTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [node name="PickupArea2D" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
