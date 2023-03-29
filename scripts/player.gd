@@ -29,11 +29,12 @@ func get_movement_vector():
 
 
 func check_deal_damage():
-	if !bodies_currently_colliding || not damage_interval_timer.isStopped():
+	if !bodies_currently_colliding || not damage_interval_timer.is_stopped():
 		return
 
 	$HealthComponent.damage(1)
 	damage_interval_timer.start()
+	print($HealthComponent.current_health)
 
 
 func on_body_entered(other_body: Node2D):
