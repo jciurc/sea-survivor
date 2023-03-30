@@ -8,8 +8,8 @@ func _ready():
 
 
 func on_restart_pressed():
-	pass
+	get_tree().change_scene_to_file("res://scenes/_main.tscn")
 
 
 func on_quit_pressed():
-	pass
+	get_tree().quit()

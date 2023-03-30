@@ -1,7 +1,16 @@
 extends Node
 
-@onready var timer = $Timer
+@export var victory_screen_scene: PackedScene
+
+@onready var arena_timer = $ArenaTimer
+
+func _ready():
+	arena_timer.timeout.connect(on_arena_timer_timeout)
 
 
 func get_time_elapsed():
-	return timer.wait_time - timer.time_left
+	return arena_timer.wait_time - arena_timer.time_left
+
+
+func on_arena_timer_timeout():
+	pass
