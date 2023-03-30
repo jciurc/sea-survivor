@@ -13,4 +13,5 @@ func get_time_elapsed():
 
 
 func on_arena_timer_timeout():
-	pass
+	var victory_screen_instance = victory_screen_scene.instantiate()
+	add_child(victory_screen_instance)
