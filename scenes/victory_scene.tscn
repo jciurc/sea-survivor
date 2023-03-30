@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://coa588oybe1jt"]
+[gd_scene load_steps=2 format=3 uid="uid://coa588oybe1jt"]
+
+[ext_resource type="Script" path="res://scripts/victory_scene.gd" id="1_6uwvn"]
 
 [node name="VictoryScene" type="CanvasLayer"]
+script = ExtResource("1_6uwvn")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -39,10 +42,12 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Quit
 "
