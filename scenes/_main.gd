@@ -2,8 +2,9 @@ extends Node
 
 @export var end_screen_scene: PackedScene
 
+
 func _ready():
-	%Player.health_component.connect.died.connect(on_player_died)
+	%Player.health_component.died.connect(on_player_died)
 
 
 func on_player_died():
