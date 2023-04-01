@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://17cyggkgaomj"]
+
+[ext_resource type="Texture2D" uid="uid://dxnfj734kpea" path="res://assets/items/axe.png" id="1_nkrnu"]
+
+[node name="AxeAbility" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nkrnu")
+offset = Vector2(0, -4)
