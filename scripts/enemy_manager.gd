@@ -6,13 +6,19 @@ var spawn_count = 5
 @export var basic_enemy_scene: PackedScene
 @export var arena_time_manager: Node
 
+@onready var timer = $Timer
+
+var base_spawn_time = 0
 
 func _ready():
-	$Timer.timeout.connect(on_timer_timeout)
+	base_spawn_time = timer.wait_time
+	timer.timeout.connect(on_timer_timeout)
 	arena_time_manager.arena_difficulty_increased.connect(on_arena_difficulty_increased)
 
 
 func spawn_enemy():
+	timer.start()
+
 	var player = get_tree().get_first_node_in_group('player') as Node2D
 	if !player: return
 
@@ -30,5 +36,8 @@ func on_timer_timeout():
 		spawn_enemy()
 
 
-func on_arena_difficulty_increased(amount: int):
-	pass
+func on_arena_difficulty_increased(difficulty: int):
+	var time_off = (.1 / 12) * difficulty
+	time_off = min(time_off, 0.7)
+	print(time_off)
+	timer.wait_time = base_spawn_time - time_off
