@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dw4nqtasklmvb" path="res://scenes/arena_time_manager.tscn" id="2_jyk8q"]
 [ext_resource type="PackedScene" uid="uid://cihp3esplk6bx" path="res://scenes/experience_bar.tscn" id="2_tn8wd"]
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="3_q02oo"]
-[ext_resource type="PackedScene" uid="uid://c846i2k5islf1" path="res://scenes/player.tscn" id="4_eb3j4"]
+[ext_resource type="PackedScene" uid="uid://bx83r2dg4rojm" path="res://scenes/player.tscn" id="4_eb3j4"]
 [ext_resource type="PackedScene" uid="uid://6g8j2f5l0vkh" path="res://scenes/experience_manager.tscn" id="5_d752e"]
 [ext_resource type="PackedScene" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
 [ext_resource type="PackedScene" uid="uid://b0g3le3e1eeww" path="res://scenes/upgrade_manager.tscn" id="6_lvatb"]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c846i2k5islf1"]
+[gd_scene load_steps=10 format=3 uid="uid://bx83r2dg4rojm"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
-[ext_resource type="PackedScene" uid="uid://dvfot8umc74gd" path="res://scenes/bullet_manager.tscn" id="2_4bonh"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_78vae"]
-[ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_o0kkg"]
+[ext_resource type="PackedScene" uid="uid://dyragefxcre8t" path="res://scenes/ability_manager.tscn" id="3_8ayhr"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uem7o"]
@@ -33,10 +32,7 @@ metadata/_edit_vertical_guides_ = []
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_78vae")]
 
-[node name="AbillityManager" parent="." instance=ExtResource("2_4bonh")]
-
-[node name="SwordAbilityController" parent="AbillityManager" instance=ExtResource("2_o0kkg")]
-process_mode = 4
+[node name="AbilityManager" parent="." instance=ExtResource("3_8ayhr")]
 
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5
