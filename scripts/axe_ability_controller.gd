@@ -9,7 +9,7 @@ func _ready():
 
 
 func on_timer_timeout():
-	var player = get_tree().get_first_node_in_group('player') as Node2D
+	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if !player: return
 
 	var foreground = get_tree().get_first_node_in_group("foreground_layer") as Node2D
