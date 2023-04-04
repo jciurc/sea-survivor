@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://b5pxvxuep3tnv"]
+
+[ext_resource type="Script" path="res://scripts/ability_upgrade.gd" id="1_11dw8"]
+
+[resource]
+script = ExtResource("1_11dw8")
+id = "sword"
+name = "Sword"
+description = "Is a sword"

@@ -1,13 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyragefxcre8t"]
+[gd_scene load_steps=2 format=3 uid="uid://dyragefxcre8t"]
 
-[ext_resource type="PackedScene" uid="uid://duoov7ql7ttf" path="res://scenes/axe_ability_controller.tscn" id="1_fpcux"]
 [ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="2_uefba"]
-[ext_resource type="PackedScene" uid="uid://rvoj73wqrdhe" path="res://scenes/bubble_controller.tscn" id="3_uxlfl"]
 
 [node name="AbilityManager" type="Node"]
 
-[node name="AxeAbilityController" parent="." instance=ExtResource("1_fpcux")]
-
 [node name="SwordAbilityController" parent="." instance=ExtResource("2_uefba")]
-
-[node name="BubbleManager" parent="." instance=ExtResource("3_uxlfl")]
