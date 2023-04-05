@@ -24,7 +24,7 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 
 
 func pick_upgrades():
-	var chosen_upgrades = []
+	var chosen_upgrades: Array[AbilityUpgrade] = []
 	var filtered_upgrades = upgrade_pool.duplicate()
 	for i in 2:
 		var chosen_upgrade = filtered_upgrades.pick_random() as AbilityUpgrade

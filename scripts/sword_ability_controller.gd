@@ -4,6 +4,8 @@ const MAX_RANGE = 150
 
 @export var sword_ability: PackedScene
 
+var damage = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.timeout.connect(on_timer_timeout)
@@ -36,3 +38,4 @@ func on_timer_timeout():
 
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
 	sword_instance.rotation = enemy_direction.angle()
+	sword_instance.hitbox_component.damage = damage
