@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0w4ic56vi18b"]
+[gd_scene load_steps=8 format=3 uid="uid://d0w4ic56vi18b"]
 
 [ext_resource type="Texture2D" uid="uid://djb1whs45ygek" path="res://assets/items/sword.png" id="1_nfytq"]
+[ext_resource type="Script" path="res://scripts/sword_ability.gd" id="1_tnxcp"]
 [ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/hitbox_component.tscn" id="2_w0i53"]
 
 [sub_resource type="Animation" id="Animation_vombi"]
@@ -107,6 +108,7 @@ _data = {
 size = Vector2(34, 30)
 
 [node name="SwordAbility" type="Node2D"]
+script = ExtResource("1_tnxcp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "swing"
