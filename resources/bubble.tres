@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://doe4qpsq5vube"]
+
+[ext_resource type="PackedScene" uid="uid://rvoj73wqrdhe" path="res://scenes/bubble_controller.tscn" id="1_2pnse"]
+[ext_resource type="Script" path="res://scripts/ability.gd" id="2_2twv8"]
+
+[resource]
+script = ExtResource("2_2twv8")
+ability_controller_scene = ExtResource("1_2pnse")
+id = "bubble"
+name = "Bubble"
+description = "Fire bubbles in a circle around the player"
