@@ -9,8 +9,7 @@ func _ready():
 
 func set_defeat():
 	%Title.text = "Defeat"
-	%DescriptionLabel.text = "Try again!"
-
+	%Description.text = "Try again!"
 
 func on_restart_pressed():
 	get_tree().paused = false
