@@ -32,7 +32,7 @@ metadata/_edit_vertical_guides_ = []
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_78vae")]
 
-[node name="AbilityManager" parent="." instance=ExtResource("3_8ayhr")]
+[node name="Abilities" parent="." instance=ExtResource("3_8ayhr")]
 
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5
