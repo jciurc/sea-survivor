@@ -4,7 +4,9 @@ extends Node
 @export var experience_manager: ExperienceManager
 @export var upgrade_screen_scene: PackedScene
 
+var number_of_upgrade_choices = 2
 var current_upgrades = {}
+
 
 func _ready():
 	experience_manager.level_up.connect(on_level_up)
@@ -26,7 +28,7 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 func pick_upgrades():
 	var chosen_upgrades: Array[AbilityUpgrade] = []
 	var filtered_upgrades = upgrade_pool.duplicate()
-	for i in 2:
+	for i in number_of_upgrade_choices:
 		var chosen_upgrade = filtered_upgrades.pick_random() as AbilityUpgrade
 		chosen_upgrades.append(chosen_upgrade)
 		filtered_upgrades = filtered_upgrades.filter(func (upgrade): return upgrade.id != chosen_upgrade.id)
