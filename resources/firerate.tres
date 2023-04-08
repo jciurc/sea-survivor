@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://d02bhpurjplp"]
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://d02bhpurjplp"]
 
-[ext_resource type="Script" path="res://scripts/ability_upgrade.gd" id="1_2sug6"]
+[ext_resource type="Script" path="res://scripts/ability.gd" id="1_kulaq"]
 
 [resource]
-script = ExtResource("1_2sug6")
+script = ExtResource("1_kulaq")
 id = "firerate"
+max_quantity = 5
 name = "Projectile Fire Rate"
 description = "Increases fire rate by 10%"
