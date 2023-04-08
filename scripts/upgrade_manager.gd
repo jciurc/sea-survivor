@@ -35,6 +35,9 @@ func pick_upgrades():
 	var filtered_upgrades = upgrade_pool.duplicate()
 	for i in number_of_upgrade_choices:
 		var chosen_upgrade = filtered_upgrades.pick_random() as AbilityUpgrade
+		if !chosen_upgrade:
+			break
+
 		chosen_upgrades.append(chosen_upgrade)
 		filtered_upgrades = filtered_upgrades.filter(func (upgrade): return upgrade.id != chosen_upgrade.id)
 
