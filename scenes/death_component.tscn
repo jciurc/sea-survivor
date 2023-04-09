@@ -9,6 +9,8 @@ spread = 10.0
 gravity = Vector3(0, 400, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 150.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 
@@ -19,3 +21,5 @@ amount = 1
 process_material = SubResource("ParticleProcessMaterial_4l138")
 texture = ExtResource("1_08t32")
 lifetime = 0.4
+fixed_fps = 0
+interpolate = false
