@@ -1,6 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3aed7bs32xpv"]
+[gd_scene load_steps=8 format=3 uid="uid://c3aed7bs32xpv"]
 
 [ext_resource type="Texture2D" uid="uid://cdwodip30uquv" path="res://assets/characters/basic_enemy.png" id="1_08t32"]
+
+[sub_resource type="Animation" id="Animation_pwu1u"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_621t4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u37jv"]
+_data = {
+"RESET": SubResource("Animation_621t4"),
+"default": SubResource("Animation_pwu1u")
+}
+
+[sub_resource type="Curve" id="Curve_paa0o"]
+_data = [Vector2(0.00554784, 0.991787), 0.0, -0.277592, 0, 0, Vector2(0.574203, 0.87885), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.28234, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_5rsm7"]
+curve = SubResource("Curve_paa0o")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4l138"]
 particle_flag_disable_z = true
@@ -13,13 +70,21 @@ angular_velocity_min = -720.0
 angular_velocity_max = 720.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_5rsm7")
 
 [node name="DeathComponent" type="Node2D"]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u37jv")
+}
+
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
 amount = 1
 process_material = SubResource("ParticleProcessMaterial_4l138")
 texture = ExtResource("1_08t32")
 lifetime = 0.4
+one_shot = true
 fixed_fps = 0
 interpolate = false
