@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3aed7bs32xpv"]
+
+[ext_resource type="Texture2D" uid="uid://cdwodip30uquv" path="res://assets/characters/basic_enemy.png" id="1_08t32"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4l138"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 400, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[node name="DeathComponent" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_4l138")
+texture = ExtResource("1_08t32")
+lifetime = 0.4
