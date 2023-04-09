@@ -7,6 +7,8 @@ const ACCELERATION_SMOOTHING = 40
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HealthBar
 @onready var abilities = $Abilities
+@onready var animation_player = $AnimationPlayer
+@onready var visuals = $Visuals
 
 var bodies_currently_colliding = 0;
 

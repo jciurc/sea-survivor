@@ -1,49 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx83r2dg4rojm"]
+[gd_scene load_steps=14 format=3 uid="uid://bx83r2dg4rojm"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_78vae"]
 [ext_resource type="PackedScene" uid="uid://dyragefxcre8t" path="res://scenes/ability_manager.tscn" id="3_8ayhr"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
-
-[sub_resource type="Animation" id="Animation_xoilf"]
-resource_name = "walk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals/Sprite2D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 4.76837e-07), Vector2(0, -3), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals/Sprite2D:scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_auwd3"]
 length = 0.001
@@ -84,10 +44,54 @@ tracks/2/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_iyd1q"]
+resource_name = "walk"
+
+[sub_resource type="Animation" id="Animation_xoilf"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 4.76837e-07), Vector2(0, -3), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Sprite2D:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2hlsy"]
 _data = {
 "RESET": SubResource("Animation_auwd3"),
-"walk": SubResource("Animation_xoilf")
+"idle": SubResource("Animation_xoilf"),
+"walk": SubResource("Animation_iyd1q")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uem7o"]
@@ -116,7 +120,7 @@ script = ExtResource("1_53hyh")
 metadata/_edit_vertical_guides_ = []
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "walk"
+autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_2hlsy")
 }
