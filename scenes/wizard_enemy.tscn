@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://q1cxavkpetts"]
+[gd_scene load_steps=9 format=3 uid="uid://q1cxavkpetts"]
 
 [ext_resource type="Texture2D" uid="uid://c4omgaf2i3gdg" path="res://assets/characters/wizard_enemy.png" id="1_1f3ek"]
 [ext_resource type="Script" path="res://scripts/wizard_enemy.gd" id="1_lppi8"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_ccqsb"]
+[ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/velocity_component.tscn" id="3_myy3y"]
 [ext_resource type="PackedScene" uid="uid://c3aed7bs32xpv" path="res://scenes/death_component.tscn" id="3_ptbbj"]
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/hurtbox_component.tscn" id="5_0j6ts"]
 
@@ -18,6 +19,10 @@ script = ExtResource("1_lppi8")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_ccqsb")]
 max_health = 30.0
+
+[node name="VelocityComponent" parent="." instance=ExtResource("3_myy3y")]
+max_speed = 60
+acceleration = 2.0
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("3_ptbbj")]
 health_component = NodePath("../HealthComponent")

@@ -1,6 +1,13 @@
-extends Node2D
-var visuals = $visuals
+extends CharacterBody2D
 
-	var move_sign = sign(velocity.x)
+@onready var velocity_component = $VelocityComponent
+@onready var visuals = $Visuals
+
+
+func _process(delta):
+	velocity_component.accelerate_to_player()
+	velocity_component.move(self)
+
+	var move_sign = sign(velocity_component.velocity.x)
 	if move_sign != 0:
 		visuals.scale = Vector2(move_sign, 1)
