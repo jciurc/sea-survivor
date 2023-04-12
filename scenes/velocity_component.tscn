@@ -4,4 +4,3 @@
 
 [node name="VelocityComponent" type="Node"]
 script = ExtResource("1_hn4e3")
-max_speed = null
