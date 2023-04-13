@@ -1,4 +1,4 @@
-class_name WeightedTabled
+class_name WeightedTable
 
 var items: Array[Dictionary] = []
 var weight_sum = 0
