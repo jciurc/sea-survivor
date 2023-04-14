@@ -14,11 +14,12 @@ func tween_collect(percent: float, start_position: Vector2):
 	global_position = start_position.lerp(player.global_position, percent)
 
 
-func on_area_entered(other_area: Area2D):
-	var tween = create_tween()
-	tween.tween_method(tween_collect.bind(global_position), 0.0, 1.0, 1)
-
-
+func collect():
 	GameEvents.emit_collect(1)
 	queue_free()
 
+
+func on_area_entered(other_area: Area2D):
+	var tween = create_tween()
+	tween.tween_method(tween_collect.bind(global_position), 0.0, 1.0, 1)
+	tween.tween_callback(collect)
