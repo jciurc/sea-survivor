@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var animation_player = $AnimationPlayer
+@onready var collision_shape_2d = $Area2D/CollisionShape2D
 
 
 func _ready():
@@ -12,6 +12,8 @@ func tween_collect(percent: float, start_position: Vector2):
 	if !player: return
 
 	global_position = start_position.lerp(player.global_position, percent)
+	var direction_from_start = player.global_position - start_position
+	rotation_degrees = rad_to_deg(direction_from_start.angle()) + 90
 
 
 func collect():
@@ -19,7 +21,13 @@ func collect():
 	queue_free()
 
 
+func disable_collision():
+	collision_shape_2d.disabled = true
+
+
 func on_area_entered(other_area: Area2D):
+	Callable(disable_collision).call_deferred()
+
 	var tween = create_tween()
 	tween.tween_method(tween_collect.bind(global_position), 0.0, 1.0, 0.5)\
 		.set_ease(Tween.EASE_IN)\
