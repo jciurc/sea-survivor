@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://d2af2qu2y3q1"]
 
 [ext_resource type="Script" path="res://scripts/arena_time_ui.gd" id="1_adyja"]
 
@@ -23,4 +23,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/outline_size = 8
 text = "test"
