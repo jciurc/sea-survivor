@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b252vhiqxhqmm"]
+
+[node name="FloatingText" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 15.0
+text = "700"
