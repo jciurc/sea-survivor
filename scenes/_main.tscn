@@ -9,7 +9,7 @@
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="3_q02oo"]
 [ext_resource type="PackedScene" uid="uid://bx83r2dg4rojm" path="res://scenes/player.tscn" id="4_eb3j4"]
 [ext_resource type="PackedScene" uid="uid://6g8j2f5l0vkh" path="res://scenes/experience_manager.tscn" id="5_d752e"]
-[ext_resource type="PackedScene" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
+[ext_resource type="PackedScene" uid="uid://d2af2qu2y3q1" path="res://scenes/arena_time_ui.tscn" id="5_vypbw"]
 [ext_resource type="PackedScene" uid="uid://b0g3le3e1eeww" path="res://scenes/upgrade_manager.tscn" id="6_lvatb"]
 [ext_resource type="PackedScene" uid="uid://bpjn0utavnj6h" path="res://scenes/basic_enemy.tscn" id="7_eehu6"]
 [ext_resource type="PackedScene" uid="uid://q1cxavkpetts" path="res://scenes/wizard_enemy.tscn" id="7_srmsi"]
