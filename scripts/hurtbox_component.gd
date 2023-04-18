@@ -19,5 +19,5 @@ func on_area_entered(hitbox_component: HitboxComponent):
 	var floating_text = floating_text_scene.instantiate() as FloatingText
 	get_tree().get_first_node_in_group("foreground_layer").add_child(floating_text)
 
-	floating_text.global_position = global_position
+	floating_text.global_position = global_position + (Vector2.UP * 16)
 	floating_text.start(str(hitbox_component.damage))
