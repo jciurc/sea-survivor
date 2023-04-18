@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b252vhiqxhqmm"]
+[gd_scene load_steps=2 format=3 uid="uid://b252vhiqxhqmm"]
+
+[ext_resource type="Script" path="res://scripts/Label.gd" id="1_e88ph"]
 
 [node name="FloatingText" type="Node2D"]
 
@@ -13,3 +15,4 @@ theme_override_constants/outline_size = 2
 text = "700"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_e88ph")
