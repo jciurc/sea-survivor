@@ -1,5 +1,5 @@
-extends Label
-
+extends Node2D
+class_name FloatingText
 
 func _ready():
 	pass
