@@ -3,7 +3,7 @@ extends Node
 @export var health_component: Node
 @export var sprite: Sprite2D
 
-var hit_flash_material = preload("res://assets/materials/hit_flash_component.gdshader")
+var hit_flash_material = preload("res://assets/materials/hit_flash_component_material.tres")
 var hit_flash_tween: Tween
 
 
@@ -18,4 +18,4 @@ func on_health_changed():
 
 	(sprite.material as ShaderMaterial).set_shader_parameter("lerp_percent", 1.0)
 	hit_flash_tween = create_tween()
-	hit_flash_tween.tween_property(sprite, "shader_parameter/lerp_percent", 0.0, .2)
+	hit_flash_tween.tween_property(sprite.material, "shader_parameter/lerp_percent", 0.0, .2)

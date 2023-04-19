@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://i2kwn566mqtf"]
+[gd_scene load_steps=2 format=3 uid="uid://cpy6q2fabdm7q"]
 
-[ext_resource type="Script" path="res://scripts/hitflash_component.gd" id="1_ejn31"]
+[ext_resource type="Script" path="res://scripts/hit_flash_component.gd" id="1_ddc02"]
 
 [node name="HitFlashComponent" type="Node"]
-script = ExtResource("1_ejn31")
+script = ExtResource("1_ddc02")
