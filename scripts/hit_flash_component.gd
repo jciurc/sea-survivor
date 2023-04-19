@@ -2,8 +2,8 @@ extends Node
 
 @export var health_component: Node
 @export var sprite: Sprite2D
+@export var hit_flash_material: ShaderMaterial
 
-var hit_flash_material = preload("res://assets/materials/hit_flash_component_material.tres")
 var hit_flash_tween: Tween
 
 

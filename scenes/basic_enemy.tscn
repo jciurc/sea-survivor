@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cwsobhloyls7v"]
+[gd_scene load_steps=14 format=3 uid="uid://bj6gajq20yo7t"]
 
 [ext_resource type="Script" path="res://scripts/basic_enemy.gd" id="1_6t370"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_p7k0i"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/velocity_component.tscn" id="4_eg3dj"]
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/hurtbox_component.tscn" id="4_xhbdl"]
 [ext_resource type="PackedScene" uid="uid://c3aed7bs32xpv" path="res://scenes/death_component.tscn" id="6_nt6lj"]
-[ext_resource type="PackedScene" uid="uid://cpy6q2fabdm7q" path="res://scenes/hitflash_component.tscn" id="8_3hcdw"]
+[ext_resource type="PackedScene" uid="uid://cpy6q2fabdm7q" path="res://scenes/hit_flash_component.tscn" id="8_3hcdw"]
 
 [sub_resource type="Animation" id="Animation_32es8"]
 length = 0.001
