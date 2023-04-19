@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bj6gajq20yo7t"]
+[gd_scene load_steps=16 format=3 uid="uid://bj6gajq20yo7t"]
 
 [ext_resource type="Script" path="res://scripts/basic_enemy.gd" id="1_6t370"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_p7k0i"]
 [ext_resource type="Texture2D" uid="uid://cdwodip30uquv" path="res://assets/characters/basic_enemy.png" id="2_uyr8g"]
+[ext_resource type="Shader" path="res://resources/hit_flash_component.gdshader" id="3_b5alo"]
 [ext_resource type="PackedScene" uid="uid://cwov3yqg44gp" path="res://scenes/vial_drop_component.tscn" id="3_icns3"]
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/velocity_component.tscn" id="4_eg3dj"]
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/hurtbox_component.tscn" id="4_xhbdl"]
@@ -95,6 +96,11 @@ _data = {
 "walk": SubResource("Animation_kwp2n")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wssf3"]
+resource_local_to_scene = true
+shader = ExtResource("3_b5alo")
+shader_parameter/lerp_percent = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_pyavs"]
 radius = 12.0
 
@@ -113,10 +119,6 @@ libraries = {
 "": SubResource("AnimationLibrary_vujqa")
 }
 
-[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("8_3hcdw")]
-health_component = NodePath("../HealthComponent")
-sprite = NodePath("../Visuals/Sprite2D")
-
 [node name="HealthComponent" parent="." instance=ExtResource("2_p7k0i")]
 
 [node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_icns3")]
@@ -124,6 +126,11 @@ drop_percent = 0.35
 health_component = NodePath("../HealthComponent")
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_eg3dj")]
+
+[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("8_3hcdw")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_wssf3")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("6_nt6lj")]
 health_component = NodePath("../HealthComponent")

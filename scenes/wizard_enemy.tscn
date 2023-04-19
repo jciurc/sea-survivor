@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://q1cxavkpetts"]
+[gd_scene load_steps=16 format=3 uid="uid://q1cxavkpetts"]
 
 [ext_resource type="Texture2D" uid="uid://c4omgaf2i3gdg" path="res://assets/characters/wizard_enemy.png" id="1_1f3ek"]
 [ext_resource type="Script" path="res://scripts/wizard_enemy.gd" id="1_lppi8"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c3aed7bs32xpv" path="res://scenes/death_component.tscn" id="3_ptbbj"]
 [ext_resource type="PackedScene" uid="uid://cwov3yqg44gp" path="res://scenes/vial_drop_component.tscn" id="4_p3ero"]
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/hurtbox_component.tscn" id="5_0j6ts"]
+[ext_resource type="PackedScene" uid="uid://cpy6q2fabdm7q" path="res://scenes/hit_flash_component.tscn" id="5_r7558"]
+[ext_resource type="Shader" path="res://resources/hit_flash_component.gdshader" id="6_sq8i5"]
 
 [sub_resource type="Animation" id="Animation_p3gpr"]
 length = 0.001
@@ -112,6 +114,11 @@ _data = {
 "walk": SubResource("Animation_lakw4")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6on2"]
+resource_local_to_scene = true
+shader = ExtResource("6_sq8i5")
+shader_parameter/lerp_percent = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_uglxe"]
 radius = 8.0
 
@@ -137,6 +144,11 @@ acceleration = 20.0
 
 [node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_p3ero")]
 health_component = NodePath("../HealthComponent")
+
+[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_r7558")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_i6on2")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("3_ptbbj")]
 health_component = NodePath("../HealthComponent")
