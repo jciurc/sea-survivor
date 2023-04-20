@@ -19,6 +19,7 @@ func _ready():
 	upgrade_pool.add_item(upgrade_axe, 10)
 	upgrade_pool.add_item(upgrade_sword, 10)
 	upgrade_pool.add_item(upgrade_bubble, 10)
+	upgrade_pool.add_item(upgrade_sword_damage, 10)
 
 	experience_manager.level_up.connect(on_level_up)
 
@@ -36,7 +37,7 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 	if upgrade.max_quantity > 0:
 		var current_quantity = current_upgrades[upgrade.id].quantity
 		if current_quantity == upgrade.max_quantity:
-			upgrade_pool = upgrade_pool.filter(func (pool_upgrade): return pool_upgrade.id != upgrade.id)
+			upgrade_pool = upgrade_pool.remove_item(upgrade)
 
 	GameEvents.emit_ability_upgrade_added(upgrade, current_upgrades)
 
@@ -44,9 +45,6 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
 	if chosen_upgrade.id == upgrade_axe.id:
 		upgrade_pool.add_item(upgrade_axe_damage, 10)
-
-	if chosen_upgrade.id == upgrade_sword.id:
-		upgrade_pool.add_item(upgrade_sword_damage, 10)
 
 	if chosen_upgrade.id == upgrade_bubble.id:
 		upgrade_pool.add_item(upgrade_firerate, 10)
