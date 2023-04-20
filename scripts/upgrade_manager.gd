@@ -54,14 +54,12 @@ func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
 
 func pick_upgrades():
 	var chosen_upgrades: Array[AbilityUpgrade] = []
-	var filtered_upgrades = upgrade_pool.duplicate()
 	for i in number_of_upgrade_choices:
-		if filtered_upgrades.size() <= 0:
+		if upgrade_pool.items.size() == chosen_upgrades.size():
 			break
 
-		var chosen_upgrade = filtered_upgrades.pick_random() as AbilityUpgrade
+		var chosen_upgrade = upgrade_pool.pick_item(chosen_upgrades) as AbilityUpgrade
 		chosen_upgrades.append(chosen_upgrade)
-		filtered_upgrades = filtered_upgrades.filter(func (upgrade): return upgrade.id != chosen_upgrade.id)
 
 	return chosen_upgrades
 
