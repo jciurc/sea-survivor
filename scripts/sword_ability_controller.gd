@@ -4,11 +4,13 @@ const MAX_RANGE = 150
 
 @export var sword_ability: PackedScene
 
-var damage = 5
+var base_damage = 5
+var damage_percent = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.timeout.connect(on_timer_timeout)
+	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
 func on_timer_timeout():
@@ -31,6 +33,7 @@ func on_timer_timeout():
 	# instantiate sword
 	var sword_instance = sword_ability.instantiate() as Node2D
 	player.get_parent().add_child(sword_instance)
+	sword_instance.hitbox_component.damage = base_damage * damage_percent
 
 	# position sword
 	sword_instance.global_position = enemies[0].global_position
@@ -38,4 +41,9 @@ func on_timer_timeout():
 
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
 	sword_instance.rotation = enemy_direction.angle()
-	sword_instance.hitbox_component.damage = damage
+	sword_instance.hitbox_component.damage = base_damage
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
+	if upgrade.id == "sword_damage":
+		damage_percent += .15
