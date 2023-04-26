@@ -5,6 +5,11 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmjmv"]
 texture = ExtResource("1_lj0mp")
+texture_margin_left = 5.0
+texture_margin_top = 6.0
+texture_margin_right = 5.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 16, 16)
 
 [resource]
 default_font = ExtResource("1_kg1v1")
