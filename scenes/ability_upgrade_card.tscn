@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/ability_upgrade_card.gd" id="1_n7axe"]
 
 [node name="AbilityUpgradeCard" type="PanelContainer"]
-custom_minimum_size = Vector2(120, 160)
+custom_minimum_size = Vector2(100, 120)
 script = ExtResource("1_n7axe")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
