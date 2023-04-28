@@ -13,7 +13,7 @@ func _ready():
 
 func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
 	var delay = 0
-	var delay_increment = 0.05
+	var delay_increment = 0.1
 	for upgrade in upgrades:
 		var card_instance = upgrade_card_scene.instantiate() as UIAbilityUpgradeCard
 		card_container.add_child(card_instance)
