@@ -11,6 +11,10 @@ func _ready():
 	gui_input.connect(on_gui_input)
 
 
+func play_in():
+	$AnimationPlayer.play("in")
+
+
 func set_ability_upgrade(upgrade: AbilityUpgrade):
 	name_label.text = upgrade.name
 	description_label.text = upgrade.description

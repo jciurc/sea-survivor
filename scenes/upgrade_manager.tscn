@@ -1,14 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0g3le3e1eeww"]
+[gd_scene load_steps=3 format=3 uid="uid://b0g3le3e1eeww"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_manager.gd" id="1_qlgoy"]
-[ext_resource type="Resource" uid="uid://d02bhpurjplp" path="res://resources/firerate.tres" id="2_d6sg3"]
 [ext_resource type="PackedScene" uid="uid://bktb7pp17kv0q" path="res://scenes/upgrade_screen.tscn" id="3_ilhqa"]
-[ext_resource type="Resource" uid="uid://b5pxvxuep3tnv" path="res://resources/sword.tres" id="3_lqmln"]
-[ext_resource type="Resource" uid="uid://bqysv1pk13n3a" path="res://resources/axe.tres" id="4_3f8vl"]
-[ext_resource type="Resource" uid="uid://doe4qpsq5vube" path="res://resources/bubble.tres" id="5_cqvla"]
 
 [node name="UpgradeManager" type="Node" node_paths=PackedStringArray("experience_manager")]
 script = ExtResource("1_qlgoy")
-upgrade_pool = Array[Resource("res://scripts/ability_upgrade.gd")]([ExtResource("2_d6sg3"), ExtResource("3_lqmln"), ExtResource("4_3f8vl"), ExtResource("5_cqvla")])
 experience_manager = NodePath("")
 upgrade_screen_scene = ExtResource("3_ilhqa")
