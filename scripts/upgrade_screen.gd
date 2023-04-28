@@ -12,11 +12,14 @@ func _ready():
 
 
 func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
+	var delay = 0
+	var delay_increment = 0.05
 	for upgrade in upgrades:
 		var card_instance = upgrade_card_scene.instantiate() as UIAbilityUpgradeCard
 		card_container.add_child(card_instance)
 		card_instance.set_ability_upgrade(upgrade)
-		card_instance.play_in(0.2)
+		card_instance.play_in(delay)
+		delay += delay_increment
 		card_instance.selected.connect(on_upgrade_selected.bind(upgrade))
 
 
