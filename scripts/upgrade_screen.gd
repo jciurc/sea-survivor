@@ -16,7 +16,7 @@ func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
 		var card_instance = upgrade_card_scene.instantiate() as UIAbilityUpgradeCard
 		card_container.add_child(card_instance)
 		card_instance.set_ability_upgrade(upgrade)
-		card_instance.play_in()
+		card_instance.play_in(0.2)
 		card_instance.selected.connect(on_upgrade_selected.bind(upgrade))
 
 

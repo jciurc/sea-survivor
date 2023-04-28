@@ -11,7 +11,9 @@ func _ready():
 	gui_input.connect(on_gui_input)
 
 
-func play_in():
+func play_in(delay: = 0.0):
+	scale = Vector2.ZERO
+	await get_tree().create_timer(delay).timeout
 	$AnimationPlayer.play("in")
 
 
