@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://binvhveu6ixse"]
+[gd_scene load_steps=8 format=3 uid="uid://binvhveu6ixse"]
 
 [ext_resource type="Script" path="res://scripts/ability_upgrade_card.gd" id="1_n7axe"]
 
@@ -63,6 +63,44 @@ _data = {
 "in": SubResource("Animation_l6obm")
 }
 
+[sub_resource type="Animation" id="Animation_cv6in"]
+resource_name = "hover"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.16, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0349066, 0.0349066, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ip214"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yuqh4"]
+_data = {
+"RESET": SubResource("Animation_ip214"),
+"hover": SubResource("Animation_cv6in")
+}
+
 [node name="AbilityUpgradeCard" type="PanelContainer"]
 custom_minimum_size = Vector2(100, 120)
 pivot_offset = Vector2(50, 60)
@@ -73,8 +111,15 @@ libraries = {
 "": SubResource("AnimationLibrary_em67k")
 }
 
+[node name="HoverAnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_yuqh4")
+}
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 8
@@ -82,6 +127,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 12
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]

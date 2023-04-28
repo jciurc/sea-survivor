@@ -1,7 +1,7 @@
 extends Node
 
 const SPAWN_RADIUS = 350
-var spawn_count = 5
+var spawn_count = 3
 
 @export var basic_enemy_scene: PackedScene
 @export var wizard_enemy_scene: PackedScene
