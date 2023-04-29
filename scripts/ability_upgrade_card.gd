@@ -20,6 +20,23 @@ func play_in(delay: = 0.0):
 	$AnimationPlayer.play("in")
 
 
+func play_discard():
+	$AnimationPlayer.play("discard")
+
+
+func select_card():
+	disabled = true
+	$AnimationPlayer.play("selected")
+
+	for other_card in get_tree().get_nodes_in_group("upgrade_card"):
+		if other_card == self:
+			continue
+		other_card.play_discard()
+
+	await $AnimationPlayer.animation_finished
+	selected.emit()
+
+
 func set_ability_upgrade(upgrade: AbilityUpgrade):
 	name_label.text = upgrade.name
 	description_label.text = upgrade.description
@@ -28,9 +45,7 @@ func set_ability_upgrade(upgrade: AbilityUpgrade):
 func on_gui_input(event: InputEvent):
 	if disabled: return
 	if event.is_action_pressed("left_click"):
-		disabled = true
-		await $AnimationPlayer.play("selected")
-		selected.emit()
+		select_card()
 
 
 func on_mouse_entered():
