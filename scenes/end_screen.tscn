@@ -80,6 +80,8 @@ color = Color(0.607843, 0.298039, 0.639216, 0.352941)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -103,7 +105,12 @@ layout_mode = 2
 [node name="Title" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
 text = "Victory"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -111,6 +118,11 @@ vertical_alignment = 1
 [node name="Description" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 8
 text = "You won!"
 horizontal_alignment = 1
 autowrap_mode = 2
