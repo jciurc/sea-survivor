@@ -43,6 +43,7 @@ default_font = ExtResource("1_kg1v1")
 default_font_size = 16
 AlternatePanelContainer/base_type = &"PanelContainer"
 AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_3e458")
+Button/colors/font_color = Color(0.247059, 0.14902, 0.192157, 1)
 Button/styles/normal = SubResource("StyleBoxTexture_ojmpf")
 Label/constants/line_spacing = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_gmjmv")
