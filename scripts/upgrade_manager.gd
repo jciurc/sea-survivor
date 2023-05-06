@@ -13,6 +13,7 @@ var upgrade_sword = preload("res://resources/sword.tres")
 var upgrade_sword_damage = preload("res://resources/sword_damage.tres")
 var upgrade_bubble = preload("res://resources/bubble.tres")
 var upgrade_firerate = preload("res://resources/firerate.tres")
+var upgrade_player_speed = preload("res://resources/player_speed.tres")
 
 
 func _ready():
@@ -20,6 +21,7 @@ func _ready():
 	upgrade_pool.add_item(upgrade_sword, 10)
 	upgrade_pool.add_item(upgrade_bubble, 10)
 	upgrade_pool.add_item(upgrade_sword_damage, 10)
+	upgrade_pool.add_item(upgrade_player_speed, 5)
 
 	experience_manager.level_up.connect(on_level_up)
 

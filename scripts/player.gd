@@ -8,10 +8,11 @@ extends CharacterBody2D
 @onready var visuals = $Visuals
 @onready var velocity_component = $VelocityComponent
 
-var bodies_currently_colliding = 0;
-
+var bodies_currently_colliding = 0
+var base_speed = 0
 
 func _ready():
+	base_speed = velocity_component.max_speed
 	$CollisionArea2D.body_entered.connect(on_body_entered)
 	$CollisionArea2D.body_exited.connect(on_body_exited)
 	damage_interval_timer.timeout.connect(on_damage_interval_timer_timeout)
@@ -63,6 +64,9 @@ func on_health_changed():
 
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
-	if not upgrade is Ability: return
-	var ability = upgrade as Ability
-	abilities.add_child(ability.ability_controller_scene.instantiate())
+	if upgrade is Ability:
+		var ability = upgrade as Ability
+		abilities.add_child(ability.ability_controller_scene.instantiate())
+	elif upgrade.id == "player_speed":
+		velocity_component.max_speed = base_speed + (base_speed * current_upgrades.player_speed.quantity * .1)
+
