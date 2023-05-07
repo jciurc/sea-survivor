@@ -14,10 +14,10 @@ tracks/0/path = NodePath("ColorRect:material:shader_parameter/vignette_intensity
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.757859, 1),
+"times": PackedFloat32Array(0, 0.01, 0.4),
+"transitions": PackedFloat32Array(0.170755, 0.363584, 1),
 "update": 0,
-"values": [3.0, 0.6]
+"values": [0.6, 1.0, 0.6]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -26,10 +26,10 @@ tracks/1/path = NodePath("ColorRect:material:shader_parameter/vignette_rgb")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.594604, 1),
+"times": PackedFloat32Array(0, 0.01, 0.4),
+"transitions": PackedFloat32Array(0.170755, 0.363584, 1),
 "update": 0,
-"values": [Color(0.803922, 0.356863, 0.509804, 1), Color(0.247059, 0.14902, 0.192157, 1)]
+"values": [Color(0.247059, 0.14902, 0.192157, 1), Color(0.803922, 0.356863, 0.509804, 1), Color(0.247059, 0.14902, 0.192157, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_27vqh"]
@@ -68,7 +68,7 @@ _data = {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kv3k4"]
 shader = ExtResource("1_ulrry")
 shader_parameter/vignette_intensity = 0.6
-shader_parameter/vignette_opacity = 0.115
+shader_parameter/vignette_opacity = 0.05
 shader_parameter/vignette_rgb = Color(0.247059, 0.14902, 0.192157, 1)
 
 [node name="Vignette" type="CanvasLayer"]
