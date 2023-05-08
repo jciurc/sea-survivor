@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bj6gajq20yo7t"]
+[gd_scene load_steps=17 format=3 uid="uid://bj6gajq20yo7t"]
 
 [ext_resource type="Script" path="res://scripts/basic_enemy.gd" id="1_6t370"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_p7k0i"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/hurtbox_component.tscn" id="4_xhbdl"]
 [ext_resource type="PackedScene" uid="uid://c3aed7bs32xpv" path="res://scenes/death_component.tscn" id="6_nt6lj"]
 [ext_resource type="PackedScene" uid="uid://cpy6q2fabdm7q" path="res://scenes/hit_flash_component.tscn" id="8_3hcdw"]
+[ext_resource type="AudioStream" uid="uid://cgplvcdlve64q" path="res://assets/audio/footstep_carpet_000.ogg" id="10_pwrsw"]
 
 [sub_resource type="Animation" id="Animation_32es8"]
 length = 0.001
@@ -96,7 +97,7 @@ _data = {
 "walk": SubResource("Animation_kwp2n")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_78kuj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cq0r6"]
 resource_local_to_scene = true
 shader = ExtResource("3_b5alo")
 shader_parameter/lerp_percent = 0.0
@@ -130,7 +131,7 @@ health_component = NodePath("../HealthComponent")
 [node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("8_3hcdw")]
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
-hit_flash_material = SubResource("ShaderMaterial_78kuj")
+hit_flash_material = SubResource("ShaderMaterial_cq0r6")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("6_nt6lj")]
 health_component = NodePath("../HealthComponent")
@@ -152,3 +153,8 @@ texture = ExtResource("2_uyr8g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_rj28j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_pwrsw")
+max_distance = 300.0
+bus = &"sfx"
