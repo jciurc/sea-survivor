@@ -13,4 +13,4 @@ func _process(delta):
 
 
 func on_hit():
-	$AudioStreamPlayer2D.play()
+	$RandomHitAudio.play_random()
