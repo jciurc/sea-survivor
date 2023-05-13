@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bepkdatl0ay2n"]
+
+[node name="SoundButton" type="Button"]
+offset_right = 6.0
+offset_bottom = 6.0
