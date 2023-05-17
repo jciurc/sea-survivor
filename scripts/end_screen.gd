@@ -15,9 +15,19 @@ func _ready():
 	%QuitButton.pressed.connect(on_quit_pressed)
 
 
+
 func set_defeat():
 	%Title.text = "Defeat"
 	%Description.text = "Try again!"
+	play_jingle(true)
+
+
+func play_jingle(defeat: bool = false):
+	if defeat:
+		$DefeatStreamPlayer.play()
+	else:
+		$VictoryStreamPlayer.play()
+
 
 func on_restart_pressed():
 	get_tree().paused = false
