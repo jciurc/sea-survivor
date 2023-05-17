@@ -22,6 +22,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 [autoload]
 
 GameEvents="*res://scenes/game_events.tscn"
+MusicPlayer="*res://scenes/music_player.tscn"
 
 [debug]
 

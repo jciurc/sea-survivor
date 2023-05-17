@@ -11,4 +11,4 @@ func on_finished():
 
 
 func on_timer_timeout():
-	pass
+	play()
