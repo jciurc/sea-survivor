@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/music_player.gd" id="2_qkxop"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
 stream = ExtResource("1_4kehm")
 volume_db = -12.0
 autoplay = true
