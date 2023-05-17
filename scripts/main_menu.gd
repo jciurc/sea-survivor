@@ -8,7 +8,7 @@ func _ready():
 
 
 func on_play_pressed():
-	pass
+	get_tree().change_scene_to_file("res://scenes/_main.tscn")
 
 
 func on_options_pressed():
@@ -16,4 +16,4 @@ func on_options_pressed():
 
 
 func on_quit_pressed():
-	pass
+	get_tree().quit()
