@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3r2as0gt4tba"]
+[gd_scene load_steps=4 format=3 uid="uid://c3r2as0gt4tba"]
 
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_n1jva"]
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="1_ukl7x"]
 [ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="2_yg6kg"]
 
 [node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_n1jva")
 
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
@@ -46,13 +48,16 @@ layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="PlayButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_yg6kg")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
 [node name="OptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_yg6kg")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_yg6kg")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
