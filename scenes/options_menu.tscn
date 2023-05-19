@@ -36,32 +36,39 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 16
+theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Options"
 
-[node name="MusicVolumeContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="AudioSliderContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="MusicVolumeContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer"]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/MusicVolumeContainer"]
 layout_mode = 2
 text = "Music Volume"
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer"]
+[node name="HSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/MusicVolumeContainer"]
 layout_mode = 2
 value = 80.0
 
-[node name="SFXVolumeContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="SFXVolumeContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SFXVolumeContainer"]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/SFXVolumeContainer"]
 layout_mode = 2
 text = "SFX Volume"
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SFXVolumeContainer"]
+[node name="HSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/SFXVolumeContainer"]
 layout_mode = 2
 value = 80.0
 
