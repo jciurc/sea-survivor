@@ -21,3 +21,4 @@ func on_window_button_pressed():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 	update_display()
+

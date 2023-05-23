@@ -61,7 +61,9 @@ text = "Music Volume"
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/MusicVolumeContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-value = 80.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="SFXVolumeContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer"]
 layout_mode = 2
@@ -73,7 +75,9 @@ text = "SFX Volume"
 [node name="SfxSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/AudioSliderContainer/SFXVolumeContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-value = 80.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="WindowOptionContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
