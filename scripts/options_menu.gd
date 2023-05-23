@@ -5,7 +5,7 @@ extends CanvasLayer
 
 func _ready():
 	window_button.pressed.connect(on_window_button_pressed)
-
+	update_display()
 
 func update_display():
 	window_button.text = "Windowed"
