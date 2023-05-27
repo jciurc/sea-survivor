@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_qjbrs")
-id = "firerate"
-max_quantity = 5
-name = "Projectile Fire Rate"
-description = "Increases fire rate by 10%"
+id = "sword_damage"
+max_quantity = 15
+name = "Sword Damage"
+description = "Increases sword ability damage by 15%"
