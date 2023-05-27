@@ -3,7 +3,7 @@ extends Node
 @export var experience_manager: ExperienceManager
 @export var upgrade_screen_scene: PackedScene
 
-var number_of_upgrade_choices = 2
+var number_of_upgrade_choices = 3
 var current_upgrades = {}
 var upgrade_pool: WeightedTable = WeightedTable.new()
 
@@ -39,7 +39,7 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 	if upgrade.max_quantity > 0:
 		var current_quantity = current_upgrades[upgrade.id].quantity
 		if current_quantity == upgrade.max_quantity:
-			upgrade_pool = upgrade_pool.remove_item(upgrade)
+			upgrade_pool.remove_item(upgrade)
 
 	GameEvents.emit_ability_upgrade_added(upgrade, current_upgrades)
 

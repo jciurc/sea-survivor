@@ -9,7 +9,7 @@ func add_item(item, weight: int):
 
 
 func pick_item(exclude_items: Array = []):
-	var adjusted_items: Array[Dictionary] = []
+	var adjusted_items = items.duplicate(true)
 	var adjusted_weight_sum = weight_sum
 
 
