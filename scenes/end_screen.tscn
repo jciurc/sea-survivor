@@ -73,12 +73,12 @@ libraries = {
 
 [node name="VictoryStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_q4aw2")
-volume_db = -4.643
+volume_db = -6.0
 bus = &"sfx"
 
 [node name="DefeatStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_oi0to")
-volume_db = -4.643
+volume_db = -6.0
 bus = &"sfx"
 
 [node name="ColorRect" type="ColorRect" parent="."]
