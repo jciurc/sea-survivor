@@ -4,5 +4,3 @@
 
 [node name="GameEvents" type="Node"]
 script = ExtResource("1_b3ic4")
-
-[connection signal="experience_vial_collected" from="." to="." method="_on_experience_vial_collected"]
