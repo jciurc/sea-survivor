@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dltvayg33t56x"]
+[gd_scene load_steps=5 format=3 uid="uid://dltvayg33t56x"]
 
 [ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_b64yn"]
 [ext_resource type="TileSet" uid="uid://n3j8g17d6mhi" path="res://resources/tileset.tres" id="2_6nlxv"]
+[ext_resource type="PackedScene" uid="uid://cccnbkn07ukg4" path="res://scenes/vignette.tscn" id="2_qplk8"]
 [ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="3_dylce"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 script = ExtResource("1_b64yn")
+
+[node name="Vignette" parent="." instance=ExtResource("2_qplk8")]
+layer = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_6nlxv")
