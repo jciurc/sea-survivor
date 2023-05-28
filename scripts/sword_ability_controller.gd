@@ -41,9 +41,8 @@ func on_timer_timeout():
 
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
 	sword_instance.rotation = enemy_direction.angle()
-	sword_instance.hitbox_component.damage = base_damage
 
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
 	if upgrade.id == "sword_damage":
-		damage_percent = 1 + (current_upgrades.sword_damage.quantity * .15)
+		damage_percent = 1 + (current_upgrades.sword_damage.quantity * .50)
