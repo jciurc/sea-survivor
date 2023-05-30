@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5e5ohp7afs8j"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="PackedScene" uid="uid://dkc3ab5lychvo" path="res://scenes/enemy_manager.tscn" id="1_36b2j"]
-[ext_resource type="Script" path="res://scripts/_main.gd" id="1_wb677"]
+[ext_resource type="Script" path="res://scripts/_main_game.gd" id="1_wb677"]
 [ext_resource type="PackedScene" uid="uid://drylnfc420aaq" path="res://scenes/game_camera.tscn" id="2_1bh08"]
 [ext_resource type="PackedScene" uid="uid://dw4nqtasklmvb" path="res://scenes/arena_time_manager.tscn" id="2_jyk8q"]
 [ext_resource type="PackedScene" uid="uid://c0jokx36cm2ty" path="res://scenes/end_screen.tscn" id="2_sy5er"]

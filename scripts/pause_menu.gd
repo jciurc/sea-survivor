@@ -7,6 +7,7 @@ var is_closing = false
 func _ready():
 	get_tree().paused = true
 	panel_container.pivot_offset = panel_container.size / 2
+
 	%ResumeButton.pressed.connect(on_resume_pressed)
 	%OptionsButton.pressed.connect(on_options_pressed)
 	%QuitButton.pressed.connect(on_quit_pressed)
@@ -51,4 +52,4 @@ func on_options_pressed():
 
 
 func on_quit_pressed():
-	pass
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

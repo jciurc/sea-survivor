@@ -31,7 +31,7 @@ func play_jingle(defeat: bool = false):
 
 func on_restart_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/_main.tscn")
+	get_tree().change_scene_to_file("res://scenes/_main_game.tscn")
 
 
 func on_quit_pressed():

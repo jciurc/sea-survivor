@@ -10,7 +10,7 @@ func _ready():
 
 
 func on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/_main.tscn")
+	get_tree().change_scene_to_file("res://scenes/_main_game.tscn")
 
 
 func on_options_pressed():
