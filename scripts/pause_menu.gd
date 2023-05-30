@@ -8,8 +8,10 @@ func _ready():
 	get_tree().paused = true
 	panel_container.pivot_offset = panel_container.size / 2
 	%ResumeButton.pressed.connect(on_resume_pressed)
-	$AnimationPlayer.play("default")
+	%OptionsButton.pressed.connect(on_options_pressed)
+	%QuitButton.pressed.connect(on_quit_pressed)
 
+	$AnimationPlayer.play("default")
 	var tween = create_tween()
 	tween.tween_property(panel_container, "scale", Vector2.ZERO, 0)
 	tween.tween_property(panel_container, "scale", Vector2.ONE, .3)\
@@ -42,3 +44,11 @@ func close():
 
 func on_resume_pressed():
 	close()
+
+
+func on_options_pressed():
+	pass
+
+
+func on_quit_pressed():
+	pass
