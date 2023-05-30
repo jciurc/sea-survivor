@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var panel_container = %PanelContainer
 
+var options_menu_scene = preload("res://scenes/options_menu.tscn")
 var is_closing = false
 
 func _ready():
@@ -48,8 +49,14 @@ func on_resume_pressed():
 
 
 func on_options_pressed():
-	pass
+	var options_menu_instance = options_menu_scene.instantiate()
+	add_child(options_menu_instance)
+	options_menu_instance.back_pressed.connect(on_options_back_pressed.bind(options_menu_instance))
 
 
 func on_quit_pressed():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func on_options_back_pressed(options_menu: Node):
+	options_menu.queue_free()

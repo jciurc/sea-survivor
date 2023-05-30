@@ -19,9 +19,9 @@ func on_options_pressed():
 	options_instance.back_pressed.connect(on_options_closed.bind(options_instance))
 
 
-func on_quit_pressed():
-	get_tree().quit()
-
-
 func on_options_closed(instance: Node):
 	instance.queue_free()
+
+
+func on_quit_pressed():
+	get_tree().quit()
