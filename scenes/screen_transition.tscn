@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmai30yyukhco"]
+
+[ext_resource type="Shader" path="res://resources/screen_transition.gdshader" id="1_yyg5l"]
+[ext_resource type="Texture2D" uid="uid://drh4frm4o2jr6" path="res://assets/screen_transition.png" id="2_d8w03"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rycdp"]
+shader = ExtResource("1_yyg5l")
+shader_parameter/transition_texture = ExtResource("2_d8w03")
+
+[node name="ScreenTransition" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_rycdp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
