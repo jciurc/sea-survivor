@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform sampler2D transition_texture;
+uniform sampler2D transition_texture : filter_nearest;
 uniform float percent : hint_range(0.0, 1.0);
 
 
