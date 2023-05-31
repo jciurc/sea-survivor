@@ -5,6 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rycdp"]
 shader = ExtResource("1_yyg5l")
+shader_parameter/transition_color = Color(0.247059, 0.14902, 0.192157, 1)
 shader_parameter/percent = 1.0
 shader_parameter/transition_texture = ExtResource("2_d8w03")
 
