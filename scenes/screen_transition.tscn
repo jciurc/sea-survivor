@@ -6,7 +6,8 @@
 
 [sub_resource type="Animation" id="Animation_qd8x8"]
 resource_name = "default"
-length = 0.4
+length = 0.6
+step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -26,7 +27,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.4),
+"times": PackedFloat32Array(0.41),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -40,7 +41,7 @@ tracks/2/path = NodePath("ColorRect:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0101405),
+"times": PackedFloat32Array(0, 0.01),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
