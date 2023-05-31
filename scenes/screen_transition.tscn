@@ -62,6 +62,7 @@ shader_parameter/percent = 0.0
 shader_parameter/transition_texture = ExtResource("2_d8w03")
 
 [node name="ScreenTransition" type="CanvasLayer"]
+layer = 5
 script = ExtResource("1_alp6i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
