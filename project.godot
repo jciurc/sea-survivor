@@ -24,6 +24,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 GameEvents="*res://scenes/game_events.tscn"
 MusicPlayer="*res://scenes/music_player.tscn"
 ScreenTransition="*res://scenes/screen_transition.tscn"
+MetaProgression="*res://scenes/meta_progression.tscn"
 
 [debug]
 
