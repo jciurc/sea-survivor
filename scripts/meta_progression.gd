@@ -1,7 +1,6 @@
 extends Node
 
 var meta_upgrades: Dictionary = {
-	"experience_gain": {
-		"quantity": 1,
-	},
+	"meta_upgrade_currency": 0,
+	"meta_upgrades": {},
 }
