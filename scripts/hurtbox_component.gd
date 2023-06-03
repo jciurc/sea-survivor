@@ -1,5 +1,5 @@
-extends Area2D
 class_name HurtboxComponent
+extends Area2D
 
 signal hit
 

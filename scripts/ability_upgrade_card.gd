@@ -1,5 +1,5 @@
-extends PanelContainer
 class_name UIAbilityUpgradeCard
+extends PanelContainer
 
 signal selected
 
