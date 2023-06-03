@@ -59,7 +59,8 @@ func spawn_enemy():
 	timer.start()
 
 	var player = get_tree().get_first_node_in_group('player') as Node2D
-	if !player: return
+	if !player:
+		return
 
 	var enemy_scene = enemy_table.pick_item()
 	var enemy = enemy_scene.instantiate() as Node2D

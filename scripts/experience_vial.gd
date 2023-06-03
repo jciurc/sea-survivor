@@ -10,7 +10,8 @@ func _ready():
 
 func tween_collect(percent: float, start_position: Vector2):
 	var player = get_tree().get_first_node_in_group("player")
-	if !player: return
+	if !player:
+		return
 
 	global_position = start_position.lerp(player.global_position, percent)
 	var direction_from_start = player.global_position - start_position

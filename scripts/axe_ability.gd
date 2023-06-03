@@ -19,6 +19,7 @@ func tween_method(rotations: float):
 	var current_direction = base_rotation.rotated(rotations * TAU)
 
 	var player = get_tree().get_first_node_in_group("player")
-	if !player: return
+	if !player:
+		return
 
 	global_position = player.global_position + (current_direction * current_radius)

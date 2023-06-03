@@ -11,14 +11,17 @@ var base_wait_time = 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	base_wait_time = $Firerate.wait_time
-	if !bullet_scene: return
+	if !bullet_scene:
+		return
+
 	$Firerate.connect('timeout', on_fire_timeout)
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
 func on_fire_timeout():
 	var player = get_tree().get_first_node_in_group('player') as Node2D
-	if !player: return
+	if !player:
+		return
 
 	for i in range(0, bullet_count):
 		var bullet_instance = bullet_scene.instantiate() as Bullet
@@ -34,8 +37,9 @@ func on_fire_timeout():
 
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
-	if upgrade.id != "firerate": return
+	if upgrade.id != "firerate":
+		return
 
-	var percent_reduction = current_upgrades["firerate"].quantity * .1
+	var percent_reduction = current_upgrades.firerate.quantity * .1
 	$Firerate.wait_time = base_wait_time * (1 - percent_reduction)
 	$Firerate.start()

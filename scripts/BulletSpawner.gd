@@ -9,13 +9,16 @@ var damage = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if !bullet_scene: return
+	if !bullet_scene:
+		return
+
 	$"../Firerate".connect('timeout', on_fire_timeout)
 
 
 func on_fire_timeout():
 	var player = get_tree().get_first_node_in_group('player') as Node2D
-	if !player: return
+	if !player:
+		return
 
 	for i in range(0, bullet_count):
 		var bullet_instance = bullet_scene.instantiate() as Bullet

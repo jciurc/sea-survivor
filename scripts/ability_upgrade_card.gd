@@ -43,11 +43,15 @@ func set_ability_upgrade(upgrade: AbilityUpgrade):
 
 
 func on_gui_input(event: InputEvent):
-	if disabled: return
+	if disabled:
+		return
+
 	if event.is_action_pressed("left_click"):
 		select_card()
 
 
 func on_mouse_entered():
-	if disabled: return
+	if disabled:
+		return
+
 	$HoverAnimationPlayer.play("hover")
