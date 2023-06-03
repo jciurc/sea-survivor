@@ -16,7 +16,7 @@ func _ready():
 	$AnimationPlayer.play("default")
 	var tween = create_tween()
 	tween.tween_property(panel_container, "scale", Vector2.ZERO, 0)
-	tween.tween_property(panel_container, "scale", Vector2.ONE, .3)\
+	tween.tween_property(panel_container, "scale", Vector2.ONE, 0.3)\
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 
 
@@ -35,7 +35,7 @@ func close():
 
 	var tween = create_tween()
 	tween.tween_property(panel_container, "scale", Vector2.ONE, 0)
-	tween.tween_property(panel_container, "scale", Vector2.ZERO, .3)\
+	tween.tween_property(panel_container, "scale", Vector2.ZERO, 0.3)\
 		.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
 
 	await tween.finished

@@ -40,6 +40,6 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	if upgrade.id != "firerate":
 		return
 
-	var percent_reduction = current_upgrades.firerate.quantity * .1
+	var percent_reduction = current_upgrades.firerate.quantity * 0.1
 	$Firerate.wait_time = base_wait_time * (1 - percent_reduction)
 	$Firerate.start()

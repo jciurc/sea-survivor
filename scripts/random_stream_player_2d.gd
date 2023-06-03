@@ -2,7 +2,7 @@ extends AudioStreamPlayer2D
 
 @export var streams: Array[AudioStream]
 @export var randomize_pitch  = true
-@export var min_pitch = .9
+@export var min_pitch = 0.9
 @export var max_pitch = 1.1
 
 func play_random():
