@@ -1,9 +1,10 @@
 class_name Bullet
 extends Node2D
 
+var speed = 200.0
+
 @onready var hitbox_component: HitboxComponent = $HitboxComponent
 
-var speed = 200.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

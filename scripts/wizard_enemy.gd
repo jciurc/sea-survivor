@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
+var is_moving = false
+
 @onready var velocity_component = $VelocityComponent
 @onready var visuals = $Visuals
-
-var is_moving = false
 
 
 func _ready():

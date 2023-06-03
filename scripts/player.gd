@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+var bodies_currently_colliding = 0
+var base_speed = 0
+
 @onready var damage_interval_timer = $DamageIntervalTimer
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HealthBar
@@ -8,8 +11,6 @@ extends CharacterBody2D
 @onready var visuals = $Visuals
 @onready var velocity_component = $VelocityComponent
 
-var bodies_currently_colliding = 0
-var base_speed = 0
 
 func _ready():
 	base_speed = velocity_component.max_speed

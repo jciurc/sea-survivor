@@ -2,9 +2,9 @@ extends Node2D
 
 const MAX_RADIUS = 100
 
-@onready var hitbox_component = $HitboxComponent
-
 var base_rotation = Vector2.RIGHT
+
+@onready var hitbox_component = $HitboxComponent
 
 
 func _ready():

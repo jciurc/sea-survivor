@@ -1,9 +1,10 @@
 extends CanvasLayer
 
-@onready var panel_container = %PanelContainer
-
 var options_menu_scene = preload("res://scenes/options_menu.tscn")
 var is_closing = false
+
+@onready var panel_container = %PanelContainer
+
 
 func _ready():
 	get_tree().paused = true

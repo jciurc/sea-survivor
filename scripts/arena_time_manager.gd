@@ -6,9 +6,9 @@ const DIFFICULTY_INTERVAL = 5
 
 @export var end_screen_scene: PackedScene
 
-@onready var arena_timer = $ArenaTimer
-
 var arena_difficulty = 0
+
+@onready var arena_timer = $ArenaTimer
 
 
 func _ready():

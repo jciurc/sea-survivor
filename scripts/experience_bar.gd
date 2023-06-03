@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @export var experience_manager: ExperienceManager
+
 @onready var progress_bar = $MarginContainer/ProgressBar
 
 

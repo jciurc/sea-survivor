@@ -3,10 +3,10 @@ extends PanelContainer
 
 signal selected
 
+var disabled = false
+
 @onready var name_label = %NameLabel
 @onready var description_label = %DescriptionLabel
-
-var disabled = false
 
 
 func _ready():

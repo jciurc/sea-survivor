@@ -7,10 +7,10 @@ var spawn_count = 3
 @export var wizard_enemy_scene: PackedScene
 @export var arena_time_manager: Node
 
-@onready var timer = $Timer
-
 var base_spawn_time = 0
 var enemy_table = WeightedTable.new()
+
+@onready var timer = $Timer
 
 
 func _ready():
