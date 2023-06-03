@@ -7,7 +7,7 @@ var speed = 200.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Lifetime.connect('timeout', on_lifetime_timeout)
+	$Lifetime.connect("timeout", on_lifetime_timeout)
 
 
 func _process(delta):
@@ -16,4 +16,4 @@ func _process(delta):
 
 
 func on_lifetime_timeout():
-	$AnimationPlayer.play('despawn')
+	$AnimationPlayer.play("despawn")

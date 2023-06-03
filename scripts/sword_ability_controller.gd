@@ -14,8 +14,8 @@ func _ready():
 
 
 func on_timer_timeout():
-	var enemies = get_tree().get_nodes_in_group('enemy')
-	var player = get_tree().get_first_node_in_group('player') as Node2D
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if !player:
 		return
 

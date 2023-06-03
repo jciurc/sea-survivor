@@ -6,4 +6,4 @@ func _ready():
 
 
 func on_player_damaged():
-	$AnimationPlayer.play('hit')
+	$AnimationPlayer.play("hit")

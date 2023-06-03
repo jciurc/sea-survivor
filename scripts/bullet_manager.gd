@@ -14,12 +14,12 @@ func _ready():
 	if !bullet_scene:
 		return
 
-	$Firerate.connect('timeout', on_fire_timeout)
+	$Firerate.connect("timeout", on_fire_timeout)
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
 func on_fire_timeout():
-	var player = get_tree().get_first_node_in_group('player') as Node2D
+	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if !player:
 		return
 

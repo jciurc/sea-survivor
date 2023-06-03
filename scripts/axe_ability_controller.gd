@@ -5,6 +5,7 @@ extends Node
 var base_damage = 10
 var damage_percent = 1.0
 
+
 func _ready():
 	$Timer.timeout.connect(on_timer_timeout)
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)

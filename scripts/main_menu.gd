@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var options_scene = preload('res://scenes/options_menu.tscn')
+var options_scene = preload("res://scenes/options_menu.tscn")
 
 
 func _ready():

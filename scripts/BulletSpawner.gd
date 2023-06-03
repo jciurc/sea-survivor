@@ -12,11 +12,11 @@ func _ready():
 	if !bullet_scene:
 		return
 
-	$"../Firerate".connect('timeout', on_fire_timeout)
+	$"../Firerate".connect("timeout", on_fire_timeout)
 
 
 func on_fire_timeout():
-	var player = get_tree().get_first_node_in_group('player') as Node2D
+	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if !player:
 		return
 
@@ -27,7 +27,6 @@ func on_fire_timeout():
 		bullet_instance.rotation = spawn_direction.angle()
 		bullet_instance.hitbox_component.damage = damage
 		player.get_parent().add_child(bullet_instance)
-
 
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var spawn_position = player.global_position + (random_direction * SPAWN_RADIUS)
