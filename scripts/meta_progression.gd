@@ -21,7 +21,7 @@ func load_save_file():
 	save_data = file.get_var()
 
 
-func save():
+func save_game():
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
 	file.store_var(save_data)
 
@@ -35,4 +35,4 @@ func add_meta_upgrade(upgrade: MetaUpgrade):
 
 func on_experience_collected(amount: float):
 	save_data.meta_upgrade_currency += amount
-	save()
+	save_game()
