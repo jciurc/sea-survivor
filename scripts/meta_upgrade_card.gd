@@ -3,10 +3,11 @@ extends PanelContainer
 
 @onready var name_label = %NameLabel
 @onready var description_label = %DescriptionLabel
+@onready var purchase_button = %PurchaseButton
 
 
 func _ready():
-	gui_input.connect(on_gui_input)
+	purchase_button.pressed.connect(on_gui_input)
 
 
 func select_card():
