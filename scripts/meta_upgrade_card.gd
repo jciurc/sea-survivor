@@ -1,17 +1,20 @@
 class_name UIMetaUpgradeCard
 extends PanelContainer
 
+var disabled = false
+
 @onready var name_label = %NameLabel
 @onready var description_label = %DescriptionLabel
 @onready var purchase_button = %PurchaseButton
 
 
 func _ready():
-	purchase_button.pressed.connect(on_gui_input)
+	purchase_button.pressed.connect(on_purchase_pressed)
 
 
 func select_card():
 	$AnimationPlayer.play("selected")
+	disabled = true
 
 
 func set_meta_upgrade(upgrade: MetaUpgrade):
@@ -19,6 +22,8 @@ func set_meta_upgrade(upgrade: MetaUpgrade):
 	description_label.text = upgrade.description
 
 
-func on_gui_input(event: InputEvent):
-	if event.is_action_pressed("left_click"):
-		select_card()
+func on_purchase_pressed():
+	if disabled:
+		return
+
+	select_card()
