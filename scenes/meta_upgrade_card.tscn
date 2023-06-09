@@ -196,7 +196,7 @@ border_width_bottom = 1
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="MetaUpgradeCard" type="PanelContainer" groups=["upgrade_card"]]
-custom_minimum_size = Vector2(140, 140)
+custom_minimum_size = Vector2(170, 140)
 pivot_offset = Vector2(50, 60)
 script = ExtResource("1_f1vqw")
 
@@ -255,6 +255,7 @@ autowrap_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="ProgressLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
@@ -265,9 +266,11 @@ horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_c33ax")
 max_value = 1.0
 value = 0.5
@@ -276,6 +279,7 @@ show_percentage = false
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control"]
 layout_mode = 1
@@ -292,6 +296,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 texture = ExtResource("13_qma1h")
 
 [node name="PurchaseButton" type="Button" parent="MarginContainer/VBoxContainer"]
