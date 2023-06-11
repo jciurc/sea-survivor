@@ -28,9 +28,10 @@ func set_meta_upgrade(upgrade: MetaUpgrade):
 	description_label.text = upgrade.description
 
 
-func update_progress(value):
-	var percent = MetaProgression.save_data
-	pass
+func update_progress():
+	var percent = MetaProgression.save_data["meta_upgrade_currency"] / upgrade.experience_cost
+	percent = min(percent, 1)
+	progress_bar.value = percent
 
 
 func on_purchase_pressed():
