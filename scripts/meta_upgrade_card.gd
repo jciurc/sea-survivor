@@ -11,6 +11,7 @@ var upgrade: MetaUpgrade
 
 
 func _ready():
+	purchase_button.disabled = MetaProgression.save_data["meta_upgrade_currency"] < 1
 	purchase_button.pressed.connect(on_purchase_pressed)
 
 
@@ -32,10 +33,15 @@ func update_progress():
 	var percent = MetaProgression.save_data["meta_upgrade_currency"] / upgrade.experience_cost
 	percent = min(percent, 1)
 	progress_bar.value = percent
+	purchase_button.disabled = percent < 1
 
 
 func on_purchase_pressed():
+	if !upgrade:
+		return
+
 	if disabled:
 		return
 
+	MetaProgression.add_meta_upgrade(upgrade)
 	select_card()

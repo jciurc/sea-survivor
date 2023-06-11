@@ -31,6 +31,7 @@ func add_meta_upgrade(upgrade: MetaUpgrade):
 		save_data.meta_upgrades[upgrade.id] = { "quantity": 0 }
 
 	save_data.meta_upgrades[upgrade.id].quantity += 1
+	save_game()
 
 
 func on_experience_collected(amount: float):
