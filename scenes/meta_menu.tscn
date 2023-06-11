@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dulflpwpym21r"]
+
+[ext_resource type="PackedScene" uid="uid://dsst7qbfnb01x" path="res://scenes/meta_upgrade_card.tscn" id="1_lqov5"]
+
+[node name="MetaMenu" type="CanvasLayer"]
+layer = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="MetaUpgradeCard" parent="MarginContainer/GridContainer" instance=ExtResource("1_lqov5")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard2" parent="MarginContainer/GridContainer" instance=ExtResource("1_lqov5")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard3" parent="MarginContainer/GridContainer" instance=ExtResource("1_lqov5")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard4" parent="MarginContainer/GridContainer" instance=ExtResource("1_lqov5")]
+layout_mode = 2
