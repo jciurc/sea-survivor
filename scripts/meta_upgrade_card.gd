@@ -11,7 +11,6 @@ var upgrade: MetaUpgrade
 
 
 func _ready():
-	purchase_button.disabled = MetaProgression.save_data["meta_upgrade_currency"] < 1
 	purchase_button.pressed.connect(on_purchase_pressed)
 
 
