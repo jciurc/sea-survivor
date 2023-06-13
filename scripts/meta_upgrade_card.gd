@@ -27,6 +27,7 @@ func set_meta_upgrade(upgrade: MetaUpgrade):
 	self.upgrade = upgrade
 	name_label.text = upgrade.title
 	description_label.text = upgrade.description
+	update_progress()
 
 
 func update_progress():
@@ -34,6 +35,7 @@ func update_progress():
 	percent = min(percent, 1)
 	progress_bar.value = percent
 	purchase_button.disabled = percent < 1
+	print(progress_bar.value)
 
 
 func on_purchase_pressed():
