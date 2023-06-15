@@ -15,7 +15,7 @@ func _ready():
 	purchase_button.pressed.connect(on_purchase_pressed)
 
 
-func select_card():
+func play_animation():
 	$AnimationPlayer.play("selected")
 	disabled = true
 
@@ -46,4 +46,7 @@ func on_purchase_pressed():
 		return
 
 	MetaProgression.add_meta_upgrade(upgrade)
-	select_card()
+	MetaProgression.save_data["meta_upgrade_currency"] -= upgrade.experience_cost
+	MetaProgression.save_game()
+	update_progress()
+	play_animation()
