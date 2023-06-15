@@ -48,5 +48,5 @@ func on_purchase_pressed():
 	MetaProgression.add_meta_upgrade(upgrade)
 	MetaProgression.save_data["meta_upgrade_currency"] -= upgrade.experience_cost
 	MetaProgression.save_game()
-	update_progress()
+	get_tree().call_group("meta_upgrade_card", "update_progress")
 	play_animation()
