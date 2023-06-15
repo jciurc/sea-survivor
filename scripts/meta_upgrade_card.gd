@@ -15,14 +15,6 @@ func _ready():
 	purchase_button.pressed.connect(on_purchase_pressed)
 
 
-func play_animation():
-	$AnimationPlayer.play("selected")
-	disabled = true
-
-	await $AnimationPlayer.animation_finished
-	disabled = false
-
-
 func set_meta_upgrade(upgrade: MetaUpgrade):
 	self.upgrade = upgrade
 	name_label.text = upgrade.title
@@ -49,4 +41,4 @@ func on_purchase_pressed():
 	MetaProgression.save_data["meta_upgrade_currency"] -= upgrade.experience_cost
 	MetaProgression.save_game()
 	get_tree().call_group("meta_upgrade_card", "update_progress")
-	play_animation()
+	$AnimationPlayer.play("selected")
