@@ -197,6 +197,7 @@ mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="ProgressLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 text = "50/200"
@@ -220,7 +221,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control"]
+[node name="VialTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
