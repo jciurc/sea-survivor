@@ -27,7 +27,7 @@ func update_progress():
 	var currency = MetaProgression.save_data["meta_upgrade_currency"]
 	var percent = min(currency / upgrade.experience_cost, 1)
 	progress_bar.value = percent
-	progress_label.text = str(currency) + "/" + str(upgrade.experience_cost)
+	progress_label.text = "%d/%d" % [currency, upgrade.experience_cost]
 	purchase_button.disabled = percent < 1
 	count_label.text = "%d owned" % MetaProgression.save_data["meta_upgrades"][upgrade.id]["quantity"]
 
