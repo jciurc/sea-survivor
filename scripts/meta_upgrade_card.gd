@@ -9,6 +9,7 @@ var upgrade: MetaUpgrade
 @onready var purchase_button = %PurchaseButton
 @onready var progress_bar = %ProgressBar
 @onready var progress_label = %ProgressLabel
+@onready var count_label = %CountLabel
 
 
 func _ready():
@@ -28,7 +29,7 @@ func update_progress():
 	progress_bar.value = percent
 	progress_label.text = str(currency) + "/" + str(upgrade.experience_cost)
 	purchase_button.disabled = percent < 1
-
+	count_label.text = "%d owned" % MetaProgression.save_data["meta_upgrades"][upgrade.id]["quantity"]
 
 func on_purchase_pressed():
 	if !upgrade:
