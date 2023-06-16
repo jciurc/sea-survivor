@@ -24,12 +24,16 @@ func set_meta_upgrade(upgrade: MetaUpgrade):
 
 
 func update_progress():
-	var currency = MetaProgression.save_data["meta_upgrade_currency"]
-	var percent = min(currency / upgrade.experience_cost, 1)
+	var player_currency = MetaProgression.save_data["meta_upgrade_currency"]
+	var percent = min(player_currency / upgrade.experience_cost, 1)
+	var current_quantity = MetaProgression.save_data["meta_upgrades"][upgrade.id]["quantity"]
+	var is_maxed = current_quantity >= upgrade.max_quantity
+	purchase_button.disabled = percent < 1 || is_maxed
 	progress_bar.value = percent
-	progress_label.text = "%d/%d" % [currency, upgrade.experience_cost]
-	purchase_button.disabled = percent < 1
-	count_label.text = "%d owned" % MetaProgression.save_data["meta_upgrades"][upgrade.id]["quantity"]
+	progress_label.text = "%d/%d" % [player_currency, upgrade.experience_cost]
+	count_label.text = "%d owned" % current_quantity
+	if is_maxed:
+		count_label.text = count_label.text + " (Max)"
 
 func on_purchase_pressed():
 	if !upgrade:
