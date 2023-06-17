@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dulflpwpym21r"]
+[gd_scene load_steps=5 format=3 uid="uid://dulflpwpym21r"]
 
 [ext_resource type="Script" path="res://scripts/meta_menu.gd" id="1_ovnrw"]
 [ext_resource type="Resource" uid="uid://dbbtixm0apd1o" path="res://resources/meta_upgrades/experience_gain.tres" id="2_hn7hf"]
 [ext_resource type="PackedScene" uid="uid://dsst7qbfnb01x" path="res://scenes/meta_upgrade_card.tscn" id="3_l1ymm"]
+[ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="4_kv2vo"]
 
 [node name="MetaMenu" type="CanvasLayer"]
 layer = 2
@@ -10,28 +11,31 @@ script = ExtResource("1_ovnrw")
 upgrades = Array[Resource("res://resources/meta_upgrades/meta_upgrade.gd")]([ExtResource("2_hn7hf")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+offset_right = 560.0
+offset_bottom = 395.0
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_bottom = 8
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/h_separation = 16
-theme_override_constants/v_separation = 16
 columns = 3
 
 [node name="MetaUpgradeCard" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard4" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard5" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard6" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
 [node name="MetaUpgradeCard2" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
@@ -39,3 +43,13 @@ layout_mode = 2
 
 [node name="MetaUpgradeCard3" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
+
+[node name="BackButton" parent="." instance=ExtResource("4_kv2vo")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+offset_left = 552.0
+offset_top = 329.0
+offset_right = 629.0
+offset_bottom = 350.0
+size_flags_vertical = 8
+text = "Back to Menu"
