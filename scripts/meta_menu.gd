@@ -5,6 +5,7 @@ extends CanvasLayer
 var meta_upgrade_card_scene = preload("res://scenes/meta_upgrade_card.tscn")
 
 @onready var grid_container = %GridContainer
+@onready var back_button = %BackButton
 
 
 func _ready():
@@ -15,3 +16,7 @@ func _ready():
 		var card_instance = meta_upgrade_card_scene.instantiate()
 		grid_container.add_child(card_instance)
 		card_instance.set_meta_upgrade(upgrade)
+
+
+func on_back_pressed():
+	ScreenTransition.transition_to_scene("res://scenes/main_menu.tscn")
