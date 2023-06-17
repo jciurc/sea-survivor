@@ -30,9 +30,10 @@ func play_jingle(defeat: bool = false):
 
 
 func on_continue_pressed():
-	ScreenTransition.transition_to_scene("res://scenes/meta_menu.tscn")
+	await ScreenTransition.transition_to_scene("res://scenes/meta_menu.tscn")
 	get_tree().paused = false
 
 
 func on_quit_pressed():
-	ScreenTransition.transition_to_scene("res://scenes/_main_menu.tscn")
+	await ScreenTransition.transition_to_scene("res://scenes/main_menu.tscn")
+	get_tree().paused = false
