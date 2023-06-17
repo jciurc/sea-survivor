@@ -9,6 +9,8 @@ var meta_upgrade_card_scene = preload("res://scenes/meta_upgrade_card.tscn")
 
 
 func _ready():
+	back_button.pressed.connect(on_back_pressed)
+
 	for child in grid_container.get_children():
 		child.queue_free()
 
