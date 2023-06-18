@@ -15,7 +15,6 @@ func _ready():
 	%QuitButton.pressed.connect(on_quit_pressed)
 
 
-
 func set_defeat():
 	%Title.text = "Defeat"
 	%Description.text = "Try again!"
