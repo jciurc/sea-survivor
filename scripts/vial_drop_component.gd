@@ -1,7 +1,7 @@
 extends Node
 
 @export_range(0, 1) var drop_percent := 1
-@export var exp_value := 1.0
+@export var vial_value := 1.0
 @export var health_component: HealthComponent
 @export var vial_scene: PackedScene
 
@@ -22,4 +22,5 @@ func on_died():
 	var vial_instance: Node2D = vial_scene.instantiate()
 	var entities_layer = get_tree().get_first_node_in_group("entities_layer") as Node2D
 	entities_layer.add_child(vial_instance)
+	vial_instance.value = vial_value
 	vial_instance.global_position = spawn_position

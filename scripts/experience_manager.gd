@@ -4,11 +4,11 @@ extends Node
 signal experience_updated(current_experience: float, target_experience: float)
 signal level_up(new_level: int)
 
-const TARGET_EXPERIENCE_GROWTH = 3
+const TARGET_EXPERIENCE_GROWTH := 3
 
-var current_experience = 0
-var current_level = 1
-var target_experience = 4
+var current_experience := 0.0
+var current_level := 1
+var target_experience := 4.0
 
 
 func _ready():
@@ -28,5 +28,4 @@ func increment_experience(number: float):
 
 func on_experience_vial_collected(value: float):
 	var adjusted_value = value * (0.1 * MetaProgression.get_upgrade_count("experience_gain"))
-	increment_experience(value)
-	print(current_experience)
+	increment_experience(adjusted_value)
