@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
 @onready var sprite = $Sprite2D
-var experience_value = 1
 
 func _ready():
 	$Area2D.area_entered.connect(on_area_entered)
@@ -20,8 +19,7 @@ func tween_collect(percent: float, start_position: Vector2):
 
 
 func collect():
-	var adjusted_value = experience_value * (0.1 * MetaProgression.get_upgrade_count("experience_gain"))
-	GameEvents.emit_experience_vial_collected(adjusted_value)
+	GameEvents.emit_experience_vial_collected(1)
 	queue_free()
 
 

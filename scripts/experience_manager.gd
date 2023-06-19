@@ -26,5 +26,7 @@ func increment_experience(number: float):
 		level_up.emit(current_level)
 
 
-func on_experience_vial_collected(number: float):
-	increment_experience(number)
+func on_experience_vial_collected(value: float):
+	var adjusted_value = value * (0.1 * MetaProgression.get_upgrade_count("experience_gain"))
+	increment_experience(value)
+	print(current_experience)

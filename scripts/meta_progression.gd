@@ -39,6 +39,7 @@ func get_upgrade_count(upgrade_id: String):
 		if save_data["meta_upgrades"].has(upgrade_id) \
 		else 0
 
+
 func on_experience_collected(amount: float):
 	save_data.meta_upgrade_currency += amount
 	save_game()

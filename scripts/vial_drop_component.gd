@@ -1,6 +1,7 @@
 extends Node
 
 @export_range(0, 1) var drop_percent := 1
+@export var exp_value := 1.0
 @export var health_component: HealthComponent
 @export var vial_scene: PackedScene
 
