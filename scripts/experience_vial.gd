@@ -4,6 +4,7 @@ extends Node2D
 @onready var sprite = $Sprite2D
 
 var value = 1.0
+var multiplier = 1.0
 
 func _ready():
 	$Area2D.area_entered.connect(on_area_entered)
@@ -21,7 +22,7 @@ func tween_collect(percent: float, start_position: Vector2):
 
 
 func collect():
-	GameEvents.emit_experience_vial_collected(value)
+	GameEvents.emit_experience_vial_collected(value * multiplier)
 	queue_free()
 
 
