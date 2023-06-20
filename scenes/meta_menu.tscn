@@ -10,15 +10,21 @@ layer = 2
 script = ExtResource("1_ovnrw")
 upgrades = Array[Resource("res://resources/meta_upgrades/meta_upgrade.gd")]([ExtResource("2_hn7hf")])
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 560.0
-offset_bottom = 395.0
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 8
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -26,22 +32,31 @@ size_flags_vertical = 0
 theme_override_constants/h_separation = 16
 columns = 3
 
-[node name="MetaUpgradeCard" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="MetaUpgradeCard4" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard4" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="MetaUpgradeCard5" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard5" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="MetaUpgradeCard6" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard6" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="MetaUpgradeCard2" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard2" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="MetaUpgradeCard3" parent="MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+[node name="MetaUpgradeCard3" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard7" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard8" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
+layout_mode = 2
+
+[node name="MetaUpgradeCard9" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
 [node name="BackButton" parent="." instance=ExtResource("4_kv2vo")]
