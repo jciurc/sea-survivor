@@ -75,28 +75,26 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.247059, 0.14902, 0.192157, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m4ik"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joi5j"]
 bg_color = Color(0.352941, 0.301961, 0.513726, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0r7y"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rou4f"]
 bg_color = Color(0.352941, 0.301961, 0.513726, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4okkp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj602"]
 bg_color = Color(0.352941, 0.301961, 0.513726, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtc1r"]
-content_margin_left = 2.0
-content_margin_top = 4.0
-content_margin_right = 2.0
-content_margin_bottom = 4.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2le4"]
+content_margin_left = 4.0
+content_margin_right = 4.0
 bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+anti_aliasing_size = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujaxi"]
-content_margin_left = 2.0
-content_margin_top = 4.0
-content_margin_right = 2.0
-content_margin_bottom = 4.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nykb"]
+content_margin_left = 4.0
+content_margin_right = 4.0
 bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+anti_aliasing_size = 4.0
 
 [resource]
 default_font = ExtResource("1_kg1v1")
@@ -127,8 +125,8 @@ Label/constants/line_spacing = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_gmjmv")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_uem7o")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_dnos5")
-VScrollBar/styles/grabber = SubResource("StyleBoxFlat_0m4ik")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_a0r7y")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_4okkp")
-VScrollBar/styles/scroll = SubResource("StyleBoxFlat_dtc1r")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_ujaxi")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_joi5j")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_rou4f")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_gj602")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_w2le4")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_5nykb")
