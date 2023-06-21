@@ -19,9 +19,9 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 24
+size_flags_horizontal = 6
 theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 24
+theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer"]
@@ -59,12 +59,22 @@ layout_mode = 2
 [node name="MetaUpgradeCard9" parent="ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("3_l1ymm")]
 layout_mode = 2
 
-[node name="BackButton" parent="." instance=ExtResource("4_kv2vo")]
+[node name="NavigationContainer" type="MarginContainer" parent="."]
+offset_left = 566.0
+offset_top = 323.0
+offset_right = 632.0
+offset_bottom = 360.0
+size_flags_horizontal = 10
+size_flags_vertical = 10
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="BackButton" parent="NavigationContainer" instance=ExtResource("4_kv2vo")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
-offset_left = 552.0
-offset_top = 329.0
-offset_right = 629.0
-offset_bottom = 350.0
-size_flags_vertical = 8
-text = "Back to Menu"
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"
