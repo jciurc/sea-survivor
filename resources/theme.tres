@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=21 format=3 uid="uid://cd6bsrgwj3jl5"]
+[gd_resource type="Theme" load_steps=23 format=3 uid="uid://cd6bsrgwj3jl5"]
 
 [ext_resource type="FontFile" uid="uid://bias1p3xfhmst" path="res://assets/fonts/Rockboxcond12.ttf" id="1_kg1v1"]
 [ext_resource type="Texture2D" uid="uid://buo10at5pkwj1" path="res://assets/ui.png" id="1_lj0mp"]
@@ -10,6 +10,13 @@ texture_margin_top = 10.0
 texture_margin_right = 2.0
 texture_margin_bottom = 10.0
 region_rect = Rect2(18, 2, 12, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3rblk"]
+load_path = "res://.godot/imported/ui.png-3ff5789afb39a2ce4470654bc9c5b336.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0bkb"]
+texture = SubResource("CompressedTexture2D_3rblk")
+region_rect = Rect2(19, 3, 10, 10)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0tet"]
 
@@ -108,10 +115,12 @@ BlueOutlineLabel/constants/outline_size = 8
 BlueOutlineLabel/constants/shadow_offset_x = 0
 BlueOutlineLabel/constants/shadow_offset_y = 0
 Button/colors/font_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_disabled_color = Color(0.545098, 0.607843, 0.705882, 1)
 Button/colors/font_focus_color = Color(0.247059, 0.14902, 0.192157, 1)
 Button/colors/font_hover_color = Color(0.741176, 0.423529, 0.290196, 1)
 Button/colors/font_hover_pressed_color = Color(0.14902, 0.168627, 0.266667, 1)
 Button/colors/font_pressed_color = Color(0.14902, 0.168627, 0.266667, 1)
+Button/styles/disabled = SubResource("StyleBoxTexture_e0bkb")
 Button/styles/focus = SubResource("StyleBoxEmpty_w0tet")
 Button/styles/hover = SubResource("StyleBoxTexture_myyi7")
 Button/styles/normal = SubResource("StyleBoxTexture_ojmpf")
