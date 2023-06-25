@@ -23,20 +23,18 @@ func _ready():
 func get_random_spawn_position(start_position: Vector2, radius: int):
 	var spawn_position = Vector2.ZERO
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
+	spawn_position = start_position + (random_direction * radius)
 
-	for i in 4:
-		spawn_position = start_position + (random_direction * radius)
-		var additional_offset = random_direction * 20
+	var additional_offset = random_direction * 20
+	var query_parameters = PhysicsRayQueryParameters2D.create(start_position, spawn_position + additional_offset, 1)
+	var result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
 
-		var query_parameters = PhysicsRayQueryParameters2D.create(start_position, spawn_position + additional_offset, 1)
-		var result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
+	# return result if in bounds
+	if result.is_empty():
+		return spawn_position
 
-		if result.is_empty():
-			break
-		else:
-			random_direction = random_direction.rotated(deg_to_rad(90))
-
-	return spawn_position
+	# generate new random position recursively if out of bounds
+	return get_random_spawn_position(start_position, radius)
 
 func on_timer_timeout():
 	for i in range(0, spawn_count):
