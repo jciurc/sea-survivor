@@ -4,7 +4,7 @@ extends Node
 @export var bullet_count = 40
 
 const SPAWN_RADIUS = 2
-var damage = 5
+var damage = 2
 var base_wait_time = 2
 
 
