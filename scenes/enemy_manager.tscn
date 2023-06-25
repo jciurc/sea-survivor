@@ -10,5 +10,6 @@ basic_enemy_scene = ExtResource("2_1kf7b")
 wizard_enemy_scene = ExtResource("2_4nelw")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 autostart = true
