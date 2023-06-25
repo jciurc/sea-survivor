@@ -17,6 +17,7 @@ func _ready():
 
 
 func increment_experience(amount: float):
+	var remainder = max(target_experience - current_experience + amount, 0)
 	current_experience = min(current_experience + amount, target_experience)
 	experience_updated.emit(current_experience, target_experience)
 
@@ -26,6 +27,10 @@ func increment_experience(amount: float):
 		current_experience = 0
 		experience_updated.emit(current_experience, target_experience)
 		level_up.emit(current_level)
+
+		# recursively carry over excess XP to next level
+		if remainder > 0:
+			increment_experience(remainder)
 
 
 func apply_scaling(target: float):
