@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkc3ab5lychvo"]
 
 [ext_resource type="Script" path="res://scripts/enemy_manager.gd" id="1_ajpe2"]
-[ext_resource type="PackedScene" uid="uid://bj6gajq20yo7t" path="res://scenes/basic_enemy.tscn" id="2_1kf7b"]
-[ext_resource type="PackedScene" uid="uid://q1cxavkpetts" path="res://scenes/wizard_enemy.tscn" id="2_4nelw"]
+[ext_resource type="PackedScene" path="res://scenes/basic_enemy.tscn" id="2_1kf7b"]
+[ext_resource type="PackedScene" path="res://scenes/wizard_enemy.tscn" id="2_4nelw"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_ajpe2")

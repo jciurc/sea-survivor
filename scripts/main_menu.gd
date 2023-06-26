@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var options_scene = preload("res://scenes/options_menu.tscn")
+var options_scene = preload("res://scenes/ui/options_menu.tscn")
 
 
 func _ready():
@@ -13,13 +13,13 @@ func _ready():
 func on_play_pressed():
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway
-	get_tree().change_scene_to_file("res://scenes/_main_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_game.tscn")
 
 
 func on_upgrades_pressed():
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway
-	get_tree().change_scene_to_file("res://scenes/meta_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/meta_menu.tscn")
 
 
 func on_options_pressed():

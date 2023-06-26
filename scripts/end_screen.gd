@@ -34,5 +34,5 @@ func on_continue_pressed():
 
 
 func on_quit_pressed():
-	await ScreenTransition.transition_to_scene("res://scenes/main_menu.tscn")
+	await ScreenTransition.transition_to_scene("res://scenes/ui/main_menu.tscn")
 	get_tree().paused = false

@@ -1,9 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://bx83r2dg4rojm"]
+[gd_scene load_steps=21 format=3]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_78vae"]
-[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/random_stream_player_2d.tscn" id="2_g0ufy"]
-[ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/velocity_component.tscn" id="2_j0bcq"]
+[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/random_stream_player_2d_component.tscn" id="2_g0ufy"]
+[ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/components/velocity_component.tscn" id="2_j0bcq"]
 [ext_resource type="PackedScene" uid="uid://dyragefxcre8t" path="res://scenes/ability_manager.tscn" id="3_8ayhr"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 [ext_resource type="AudioStream" uid="uid://5iaisdhjnkea" path="res://assets/audio/impactMining_000.ogg" id="3_umcyh"]

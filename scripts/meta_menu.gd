@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @export var upgrades: Array[MetaUpgrade] = []
 
-var meta_upgrade_card_scene = preload("res://scenes/meta_upgrade_card.tscn")
+var meta_upgrade_card_scene = preload("res://scenes/ui/meta_upgrade_card.tscn")
 
 @onready var grid_container = %GridContainer
 @onready var back_button = %BackButton
@@ -21,4 +21,4 @@ func _ready():
 
 
 func on_back_pressed():
-	ScreenTransition.transition_to_scene("res://scenes/main_menu.tscn")
+	ScreenTransition.transition_to_scene("res://scenes/ui/main_menu.tscn")
