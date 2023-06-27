@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://17cyggkgaomj"]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/axe_ability.gd" id="1_enaqs"]
 [ext_resource type="Texture2D" uid="uid://dxnfj734kpea" path="res://assets/items/axe.png" id="1_nkrnu"]
-[ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/hitbox_component.tscn" id="3_hwjfc"]
+[ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/components/hitbox_component.tscn" id="3_hwjfc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_insjj"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dv1gstsjsafhy" path="res://assets/items/vial_green.png" id="1_ehdjp"]
 [ext_resource type="Script" path="res://scripts/experience_vial.gd" id="1_upil7"]
-[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/random_stream_player_2d_component.tscn" id="2_kc8a1"]
+[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/components/random_stream_player_2d_component.tscn" id="2_kc8a1"]
 [ext_resource type="AudioStream" uid="uid://ce66wwn3ftj82" path="res://assets/audio/impactGeneric_light_000.ogg" id="3_swkca"]
 [ext_resource type="AudioStream" uid="uid://djoa7bdf3rm5x" path="res://assets/audio/impactGeneric_light_001.ogg" id="4_idsjo"]
 [ext_resource type="AudioStream" uid="uid://dch48cviwb0ge" path="res://assets/audio/impactGeneric_light_002.ogg" id="5_dqexu"]

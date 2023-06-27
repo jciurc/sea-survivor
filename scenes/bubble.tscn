@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://pgtw4d63fqgh"]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Texture2D" uid="uid://bvomk1a4dvnv5" path="res://assets/characters/bullet.png" id="1_bju1c"]
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_tn6be"]
-[ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/hitbox_component.tscn" id="3_itc76"]
+[ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/components/hitbox_component.tscn" id="3_itc76"]
 
 [sub_resource type="Animation" id="Animation_h7q20"]
 length = 0.001

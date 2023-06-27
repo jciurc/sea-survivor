@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cr6x3si7eapff"]
+[gd_scene load_steps=3 format=3 uid="uid://cwov3yqg44gp"]
 
 [ext_resource type="Script" path="res://scripts/vial_drop_component.gd" id="1_2j8l3"]
 [ext_resource type="PackedScene" path="res://scenes/experience_vial.tscn" id="2_ioca3"]

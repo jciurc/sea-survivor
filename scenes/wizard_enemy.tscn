@@ -1,15 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://dvm78jymtshhq"]
+[gd_scene load_steps=22 format=3 uid="uid://tl4d83ojptaw"]
 
 [ext_resource type="Texture2D" uid="uid://c4omgaf2i3gdg" path="res://assets/characters/wizard_enemy.png" id="1_1f3ek"]
 [ext_resource type="Script" path="res://scripts/wizard_enemy.gd" id="1_lppi8"]
-[ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/health_component.tscn" id="2_ccqsb"]
+[ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/components/health_component.tscn" id="2_ccqsb"]
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/components/velocity_component.tscn" id="3_myy3y"]
 [ext_resource type="PackedScene" path="res://scenes/components/death_component.tscn" id="3_ptbbj"]
-[ext_resource type="PackedScene" uid="uid://cwov3yqg44gp" path="res://scenes/vial_drop_component.tscn" id="4_p3ero"]
+[ext_resource type="PackedScene" uid="uid://cwov3yqg44gp" path="res://scenes/components/vial_drop_component.tscn" id="4_p3ero"]
 [ext_resource type="PackedScene" uid="uid://dwlrvl6hcujmk" path="res://scenes/components/hurtbox_component.tscn" id="5_0j6ts"]
 [ext_resource type="PackedScene" uid="uid://cpy6q2fabdm7q" path="res://scenes/components/hit_flash_component.tscn" id="5_r7558"]
 [ext_resource type="Shader" path="res://resources/hit_flash_component.gdshader" id="6_sq8i5"]
-[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/random_stream_player_2d_component.tscn" id="8_uyr38"]
+[ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/components/random_stream_player_2d_component.tscn" id="8_uyr38"]
 [ext_resource type="AudioStream" uid="uid://cgplvcdlve64q" path="res://assets/audio/footstep_carpet_000.ogg" id="9_jjntm"]
 [ext_resource type="AudioStream" uid="uid://bfjb88u1km5o3" path="res://assets/audio/footstep_carpet_001.ogg" id="10_hdfbo"]
 [ext_resource type="AudioStream" uid="uid://co7vdntdbgbl7" path="res://assets/audio/footstep_carpet_002.ogg" id="11_0yp44"]
@@ -120,7 +120,7 @@ _data = {
 "walk": SubResource("Animation_lakw4")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lybwh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cp4fx"]
 resource_local_to_scene = true
 shader = ExtResource("6_sq8i5")
 shader_parameter/lerp_percent = 0.0
@@ -154,7 +154,7 @@ health_component = NodePath("../HealthComponent")
 [node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_r7558")]
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
-hit_flash_material = SubResource("ShaderMaterial_lybwh")
+hit_flash_material = SubResource("ShaderMaterial_cp4fx")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("3_ptbbj")]
 health_component = NodePath("../HealthComponent")
@@ -163,19 +163,20 @@ sprite = NodePath("../Visuals/Sprite2D")
 [node name="RandomHitAudio" parent="." instance=ExtResource("8_uyr38")]
 streams = Array[AudioStream]([ExtResource("9_jjntm"), ExtResource("10_hdfbo"), ExtResource("11_0yp44"), ExtResource("12_te72l"), ExtResource("13_vg2yq")])
 
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_0j6ts")]
+visible = false
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_uglxe")
+
 [node name="Visuals" type="Node2D" parent="."]
 position = Vector2(0, -4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 texture = ExtResource("1_1f3ek")
 offset = Vector2(0, -4)
-
-[node name="HurtboxComponent" parent="." instance=ExtResource("5_0j6ts")]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
-position = Vector2(0, -7)
-shape = SubResource("CircleShape2D_uglxe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
