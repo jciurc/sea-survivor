@@ -4,8 +4,8 @@ extends Node
 signal experience_updated(current_experience: float, target_experience: float)
 signal level_up(new_level: int)
 
-const TARGET_GROWTH_FACTOR := 1.6
-const TARGET_GROWTH_FLAT := 12.0
+const TARGET_GROWTH_FACTOR := 1.2
+const TARGET_GROWTH_FLAT := 8.0
 
 var current_experience := 0.0
 var current_level := 1
