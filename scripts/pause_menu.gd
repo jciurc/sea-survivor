@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var options_menu_scene = preload("res://scenes/ui/options_menu.tscn")
+var options_menu_scene = preload("res://scenes/screens/options_menu.tscn")
 var is_closing = false
 
 @onready var panel_container = %PanelContainer
@@ -57,10 +57,11 @@ func on_options_pressed():
 	options_menu_instance.back_pressed.connect(on_options_back_pressed.bind(options_menu_instance))
 
 
-func on_quit_pressed():
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
-
-
 func on_options_back_pressed(options_menu: Node):
 	options_menu.queue_free()
+
+
+func on_quit_pressed():
+	ScreenTransition.transition_to_scene("res://scenes/screens/main_menu.tscn")
+	await ScreenTransition.transitioned_halfway
+	get_tree().paused = false

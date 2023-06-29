@@ -2,7 +2,7 @@ extends Node
 
 @export var end_screen_scene: PackedScene
 
-var pause_menu_scene = preload("res://scenes/ui/pause_menu.tscn")
+var pause_menu_scene = preload("res://scenes/screens/pause_menu.tscn")
 
 
 func _ready():

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bt4rp5033y6wd"]
 
-[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_rcdmo"]
-[ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="4_kephe"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_kxv06"]
+[ext_resource type="PackedScene" path="res://scenes/sound_button.tscn" id="2_cor4u"]
 
 [sub_resource type="Animation" id="Animation_x4yt0"]
 length = 0.001
@@ -43,7 +43,7 @@ _data = {
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_rcdmo")
+script = ExtResource("1_kxv06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -99,17 +99,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 8
 
-[node name="ResumeButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_kephe")]
+[node name="ResumeButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_cor4u")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="OptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_kephe")]
+[node name="OptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_cor4u")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 
-[node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_kephe")]
+[node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_cor4u")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit to Menu"

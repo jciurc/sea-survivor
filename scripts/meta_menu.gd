@@ -21,4 +21,4 @@ func _ready():
 
 
 func on_back_pressed():
-	ScreenTransition.transition_to_scene("res://scenes/ui/main_menu.tscn")
+	ScreenTransition.transition_to_scene("res://scenes/screens/main_menu.tscn")

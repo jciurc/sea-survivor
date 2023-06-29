@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dltvayg33t56x"]
 
-[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_b64yn"]
-[ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="3_dylce"]
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_vqiv7"]
+[ext_resource type="PackedScene" path="res://scenes/sound_button.tscn" id="2_dkjlv"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 layer = 2
-script = ExtResource("1_b64yn")
+script = ExtResource("1_vqiv7")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -85,7 +85,7 @@ layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 text = "Window Mode"
 
-[node name="WindowButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/WindowOptionContainer" instance=ExtResource("3_dylce")]
+[node name="WindowButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/WindowOptionContainer" instance=ExtResource("2_dkjlv")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
@@ -96,7 +96,7 @@ text = "Windowed"
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_dylce")]
+[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_dkjlv")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
