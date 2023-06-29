@@ -41,5 +41,5 @@ func apply_scaling(target: float):
 
 
 func on_experience_vial_collected(value: float):
-	var adjusted_value = value * (0.1 * MetaProgression.get_upgrade_count("experience_gain"))
+	var adjusted_value = value * (1 + (0.1 * MetaProgression.get_upgrade_count("experience_gain")))
 	increment_experience(adjusted_value)

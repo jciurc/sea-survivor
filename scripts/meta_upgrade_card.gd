@@ -17,7 +17,7 @@ func _ready():
 
 
 func set_meta_upgrade(new_upgrade: MetaUpgrade):
-	self.upgrade = new_upgrade
+	upgrade = new_upgrade
 	name_label.text = upgrade.title
 	description_label.text = upgrade.description
 	update_progress()
@@ -40,7 +40,6 @@ func update_progress():
 func on_purchase_pressed():
 	if !upgrade:
 		return
-
 	if disabled:
 		return
 

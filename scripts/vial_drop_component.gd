@@ -11,11 +11,11 @@ func _ready():
 
 
 func on_died():
-	if randf() > drop_percent:
-		return
 	if vial_scene == null:
 		return
 	if not owner is Node2D:
+		return
+	if randf() > drop_percent:
 		return
 
 	var spawn_position = owner.global_position

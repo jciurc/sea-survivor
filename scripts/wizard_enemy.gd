@@ -23,7 +23,6 @@ func _process(delta):
 		visuals.scale = Vector2(move_sign, 1)
 
 
-
 func set_is_moving(moving: bool):
 	is_moving = moving
 
