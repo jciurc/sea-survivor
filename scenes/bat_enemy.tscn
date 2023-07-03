@@ -145,8 +145,8 @@ libraries = {
 max_health = 30.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("3_j5skq")]
-max_speed = 60
-acceleration = 20.0
+max_speed = 90
+acceleration = 0.75
 
 [node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_di3it")]
 health_component = NodePath("../HealthComponent")
