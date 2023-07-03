@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://bsehbmwrt56pm"]
 
-[ext_resource type="Script" path="res://scripts/wizard_enemy.gd" id="1_wtunk"]
+[ext_resource type="Script" path="res://scripts/bat_enemy.gd" id="1_f3ekx"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/components/health_component.tscn" id="2_7oh1g"]
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/components/velocity_component.tscn" id="3_j5skq"]
 [ext_resource type="PackedScene" uid="uid://cwov3yqg44gp" path="res://scenes/components/vial_drop_component.tscn" id="4_di3it"]
@@ -30,30 +30,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals/Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals/Sprite2D:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_lakw4"]
 resource_name = "walk"
@@ -63,46 +39,22 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/path = NodePath("Visuals/Sprite2D:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.01, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 2.82843, 3.73213, 1),
 "update": 0,
 "values": [0.0, -0.174533, 0.261799, 0.0]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals/Sprite2D:scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.01, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 2.82843, 1, 3.73213, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.2, 0.9), Vector2(0.9, 1.1), Vector2(1, 1)]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -133,7 +85,7 @@ radius = 5.0
 
 [node name="BatEnemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 8
-script = ExtResource("1_wtunk")
+script = ExtResource("1_f3ekx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "walk"
@@ -164,20 +116,17 @@ sprite = NodePath("../Visuals/Sprite2D")
 streams = Array[AudioStream]([ExtResource("9_hhuc3"), ExtResource("10_gy8go"), ExtResource("11_co3xe"), ExtResource("12_n6eir"), ExtResource("13_ap27c")])
 
 [node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("14_meuqh")]
-visible = false
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
-position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_uglxe")
 
 [node name="Visuals" type="Node2D" parent="."]
 position = Vector2(0, -4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 4)
 texture = ExtResource("15_w16fv")
-offset = Vector2(0, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_kakdh")
