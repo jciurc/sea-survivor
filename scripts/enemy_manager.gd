@@ -5,6 +5,7 @@ var spawn_count = 2
 
 @export var basic_enemy_scene: PackedScene
 @export var wizard_enemy_scene: PackedScene
+@export var bat_enemy_scene: PackedScene
 @export var arena_time_manager: Node
 
 var base_spawn_time: int
