@@ -48,8 +48,11 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	time_off = min(time_off, 0.7)
 	timer.wait_time = base_spawn_time - time_off
 
-	if arena_difficulty == 2:
-		enemy_table.add_item(wizard_enemy_scene, 20)
+	if arena_difficulty == 6:
+		enemy_table.add_item(wizard_enemy_scene, 14)
+
+	if arena_difficulty == 10:
+		enemy_table.add_item(bat_enemy_scene, 8)
 
 
 func spawn_enemy():
