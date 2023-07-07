@@ -52,7 +52,7 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.add_item(wizard_enemy_scene, 14)
 
 	if arena_difficulty == 10:
-		enemy_table.add_item(bat_enemy_scene, 8)
+		enemy_table.add_item(bat_enemy_scene, 6)
 
 
 func spawn_enemy():
