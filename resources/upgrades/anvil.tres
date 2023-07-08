@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://d2d3x63of38uh"]
+
+[ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="1_gjxyo"]
+[ext_resource type="Script" path="res://scripts/ability.gd" id="2_j6wna"]
+
+[resource]
+script = ExtResource("2_j6wna")
+ability_controller_scene = ExtResource("1_gjxyo")
+id = "anvil"
+max_quantity = 4
+name = "Sword"
+description = "Drop an anvil on the enemy"
