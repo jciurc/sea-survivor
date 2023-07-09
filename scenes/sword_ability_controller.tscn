@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cld25bncjceeo"]
 
 [ext_resource type="Script" path="res://scripts/sword_ability_controller.gd" id="1_05uav"]
-[ext_resource type="PackedScene" uid="uid://d0w4ic56vi18b" path="res://scenes/sword_ability.tscn" id="2_yohx0"]
+[ext_resource type="PackedScene" uid="uid://g6s784k1m1mq" path="res://scenes/sword_ability.tscn" id="2_yohx0"]
 
 [node name="SwordAbilityController" type="Node"]
 script = ExtResource("1_05uav")

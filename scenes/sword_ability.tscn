@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://g6s784k1m1mq"]
 
 [ext_resource type="Texture2D" uid="uid://djb1whs45ygek" path="res://assets/items/sword.png" id="1_nfytq"]
 [ext_resource type="Script" path="res://scripts/sword_ability.gd" id="1_tnxcp"]
