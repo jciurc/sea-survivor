@@ -18,7 +18,7 @@ func emit_player_damaged():
 
 
 # global methods
-func get_random_spawn_position(start_position: Vector2, radius: int, collision_offset = 20, retries = 100):
+func get_random_spawn_position(start_position: Vector2, radius: int, collision_offset = 20, retries = 1000):
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var spawn_position = start_position + (random_direction * radius)
 
