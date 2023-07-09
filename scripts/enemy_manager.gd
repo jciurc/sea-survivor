@@ -22,9 +22,8 @@ func _ready():
 
 
 func get_random_spawn_position(start_position: Vector2, radius: int):
-	var spawn_position = Vector2.ZERO
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
-	spawn_position = start_position + (random_direction * radius)
+	var spawn_position = start_position + (random_direction * radius)
 
 	var additional_offset = random_direction * 20
 	var query_parameters = PhysicsRayQueryParameters2D.create(start_position, spawn_position + additional_offset, 1)
