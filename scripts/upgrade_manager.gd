@@ -8,17 +8,20 @@ var current_upgrades = {}
 var upgrade_pool: WeightedTable = WeightedTable.new()
 
 var upgrade_axe = preload("res://resources/upgrades/axe.tres")
-var upgrade_axe_damage = preload("res://resources/upgrades/axe_damage.tres")
 var upgrade_sword = preload("res://resources/upgrades/sword.tres")
-var upgrade_sword_damage = preload("res://resources/upgrades/sword_damage.tres")
+var upgrade_anvil = preload("res://resources/upgrades/anvil.tres")
 var upgrade_bubble = preload("res://resources/upgrades/bubble.tres")
+
+var upgrade_axe_damage = preload("res://resources/upgrades/axe_damage.tres")
+var upgrade_sword_damage = preload("res://resources/upgrades/sword_damage.tres")
 var upgrade_firerate = preload("res://resources/upgrades/firerate.tres")
 var upgrade_player_speed = preload("res://resources/upgrades/player_speed.tres")
 
 
 func _ready():
-	upgrade_pool.add_item(upgrade_axe, 10)
 	upgrade_pool.add_item(upgrade_sword, 10)
+	upgrade_pool.add_item(upgrade_axe, 10)
+	upgrade_pool.add_item(upgrade_anvil, 10)
 	upgrade_pool.add_item(upgrade_bubble, 10)
 	upgrade_pool.add_item(upgrade_sword_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
