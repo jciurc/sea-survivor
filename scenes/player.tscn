@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/components/health_component.tscn" id="2_78vae"]
 [ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/components/random_stream_player_2d_component.tscn" id="2_g0ufy"]
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/components/velocity_component.tscn" id="2_j0bcq"]
-[ext_resource type="PackedScene" uid="uid://dyragefxcre8t" path="res://scenes/ability_manager.tscn" id="3_8ayhr"]
 [ext_resource type="Texture2D" uid="uid://fufb8bsysu81" path="res://assets/characters/jelly.png" id="3_fnrlf"]
 [ext_resource type="AudioStream" uid="uid://5iaisdhjnkea" path="res://assets/audio/impactMining_000.ogg" id="3_umcyh"]
 [ext_resource type="AudioStream" uid="uid://cmnhwdbbpiqly" path="res://assets/audio/impactMining_001.ogg" id="4_12fyg"]
 [ext_resource type="AudioStream" uid="uid://b1jv6npjsjt3e" path="res://assets/audio/impactMining_002.ogg" id="5_bw6eu"]
 [ext_resource type="AudioStream" uid="uid://s3s1e2oyl4je" path="res://assets/audio/impactMining_003.ogg" id="6_ljbio"]
 [ext_resource type="AudioStream" uid="uid://7p854405vpyc" path="res://assets/audio/impactMining_004.ogg" id="7_v4dr0"]
+[ext_resource type="PackedScene" uid="uid://cld25bncjceeo" path="res://scenes/sword_ability_controller.tscn" id="10_juagy"]
 
 [sub_resource type="Animation" id="Animation_auwd3"]
 length = 0.001
@@ -141,7 +141,9 @@ acceleration = 40.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_78vae")]
 
-[node name="Abilities" parent="." instance=ExtResource("3_8ayhr")]
+[node name="AbilityManager" type="Node" parent="."]
+
+[node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("10_juagy")]
 
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5

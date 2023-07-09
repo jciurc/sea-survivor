@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://b7ptgqjvyqe82"]
 
 [ext_resource type="Script" path="res://scripts/axe_ability.gd" id="1_enaqs"]
 [ext_resource type="Texture2D" uid="uid://dxnfj734kpea" path="res://assets/items/axe.png" id="1_nkrnu"]
