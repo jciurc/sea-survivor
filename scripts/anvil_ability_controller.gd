@@ -2,7 +2,6 @@ extends Node
 
 const BASE_RANGE := 100
 const COLLISION_OFFSET := -20 # allow ability to spawn slightly out of bounds
-const BASE_DAMAGE = 15
 
 @export var anvil_ability_scene: PackedScene
 
@@ -20,4 +19,3 @@ func on_timer_timeout():
 	var anvil_instance = anvil_ability_scene.instantiate()
 	get_tree().get_first_node_in_group("foreground_layer").add_child(anvil_instance)
 	anvil_instance.position = random_position
-	anvil_instance.hitbox_component.damage = BASE_DAMAGE
