@@ -21,7 +21,10 @@ func _ready():
 	arena_time_manager.arena_difficulty_increased.connect(on_arena_difficulty_increased)
 
 
-func get_random_spawn_position(start_position: Vector2, radius: int):
+func get_random_spawn_position(start_position: Vector2, radius: int, retries = 100):
+	if retries <= 0:
+		return
+
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var spawn_position = start_position + (random_direction * radius)
 
@@ -34,7 +37,7 @@ func get_random_spawn_position(start_position: Vector2, radius: int):
 		return spawn_position
 
 	# generate new random position recursively if out of bounds
-	return get_random_spawn_position(start_position, radius)
+	return get_random_spawn_position(start_position, radius, retries - 1)
 
 
 func on_timer_timeout():
