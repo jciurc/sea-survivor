@@ -1,7 +1,7 @@
 extends Node
 
 const BASE_RANGE := 100
-const COLLISION_OFFSET := -10
+const COLLISION_OFFSET := -20 # allow ability to spawn slightly out of bounds
 
 @export var anvil_ability_scene: PackedScene
 
