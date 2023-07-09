@@ -31,4 +31,4 @@ func get_random_spawn_position(start_position: Vector2, radius: int, collision_o
 		return spawn_position
 
 	# generate new random position recursively if out of bounds
-	return get_random_spawn_position(start_position, radius, collision_offset, retries - 1)
+	return get_random_spawn_position(start_position, radius, collision_offset - 0.1, retries - 1)
