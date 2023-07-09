@@ -17,4 +17,5 @@ func on_timer_timeout():
 
 	var random_position = GameEvents.get_random_spawn_position(player.global_position, BASE_RANGE, COLLISION_OFFSET)
 	var anvil_instance = anvil_ability_scene.instantiate()
+	get_tree().get_first_node_in_group("foreground_layer").add_child(anvil_instance)
 	anvil_instance.position = random_position
