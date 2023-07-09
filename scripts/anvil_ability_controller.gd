@@ -14,8 +14,9 @@ func on_timer_timeout():
 	if !player:
 		return
 
-	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
-	var random_position = random_direction * randf_range(0, BASE_RANGE)
-	var additional_offset = random_direction * 20
-	var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, random_position + additional_offset, 1)
-	var collisions = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
+	var random_position = GameEvents.get_random_spawn_position(player.global_position, BASE_RANGE)
+	if random_position == -1:
+		return
+
+	var anvil_instance = anvil_ability_scene.instantiate()
+	anvil_instance.position = random_position
