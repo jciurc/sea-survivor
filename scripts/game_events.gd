@@ -18,20 +18,17 @@ func emit_player_damaged():
 
 
 # global methods
-func get_random_spawn_position(start_position: Vector2, radius: int, retries = 100):
-	if retries <= 0:
-		return -1
-
+func get_random_spawn_position(start_position: Vector2, radius: int, collision_offset = 20, retries = 100):
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var spawn_position = start_position + (random_direction * radius)
 
-	var additional_offset = random_direction * 20
+	var additional_offset = random_direction * collision_offset
 	var query_parameters = PhysicsRayQueryParameters2D.create(start_position, spawn_position + additional_offset, 1)
 	var collisions = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
 
-	# return result if in bounds
-	if collisions.is_empty():
+	# return result if in bounds or after enough tries
+	if collisions.is_empty() or retries <= 0:
 		return spawn_position
 
 	# generate new random position recursively if out of bounds
-	return get_random_spawn_position(start_position, radius, retries - 1)
+	return get_random_spawn_position(start_position, radius, collision_offset, retries - 1)

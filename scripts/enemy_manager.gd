@@ -51,7 +51,4 @@ func spawn_enemy():
 	entities_layer.add_child(enemy)
 
 	var random_position = GameEvents.get_random_spawn_position(player.global_position, SPAWN_RADIUS)
-	if random_position == -1:
-		return
-
 	enemy.global_position = random_position
