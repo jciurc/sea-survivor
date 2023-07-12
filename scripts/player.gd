@@ -3,6 +3,8 @@ extends CharacterBody2D
 var bodies_currently_colliding = 0
 var base_speed = 0
 
+@export var arena_time_manager: Node
+
 @onready var damage_interval_timer = $DamageIntervalTimer
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HealthBar
@@ -13,6 +15,7 @@ var base_speed = 0
 
 
 func _ready():
+	arena_time_manager.arena_difficulty_increased(on_arena_difficulty_increased)
 	base_speed = velocity_component.max_speed
 	$CollisionArea2D.body_entered.connect(on_body_entered)
 	$CollisionArea2D.body_exited.connect(on_body_exited)
@@ -73,3 +76,6 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	elif upgrade.id == "player_speed":
 		velocity_component.max_speed = base_speed + (base_speed * current_upgrades.player_speed.quantity * 0.1)
 
+
+func on_arena_difficulty_increased(difficulty):
+	pass
