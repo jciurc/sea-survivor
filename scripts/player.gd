@@ -79,6 +79,6 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 
 func on_arena_difficulty_increased(difficulty: int):
 	# difficulty increases every 5 seconds
-	var is_thirty_second_interval = (difficulty % 6) == 0
-	if is_thirty_second_interval:
+	var is_fifteen_second_interval = (difficulty % 3) == 0
+	if is_fifteen_second_interval:
 		health_component.heal(1)
