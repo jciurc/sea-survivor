@@ -3,6 +3,7 @@ extends Node
 
 signal died
 signal health_decreased
+signal health_changed
 
 @export var max_health := 10.0
 
