@@ -67,9 +67,10 @@ func on_damage_interval_timer_timeout():
 func on_health_decreased():
 	GameEvents.emit_player_damaged()
 	$HitRandomStreamPlayer.play_random()
+	update_health_display()
 
 
-func on_health_changed(amount: float):
+func on_health_changed():
 	update_health_display()
 
 
@@ -86,3 +87,4 @@ func on_arena_difficulty_increased(difficulty: int):
 	var is_fifteen_second_interval = (difficulty % 3) == 0
 	if is_fifteen_second_interval:
 		health_component.heal(1)
+		on_health_changed()
