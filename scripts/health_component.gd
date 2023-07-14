@@ -17,11 +17,13 @@ func _ready():
 func damage(amount: float):
 	current_health = max(current_health - amount, 0)
 	health_decreased.emit()
+	health_changed.emit()
 	Callable(check_death).call_deferred()
 
 
 func heal(amount: float):
 	current_health = min(current_health + amount, current_health)
+	health_changed.emit()
 
 
 func get_health_percent():
