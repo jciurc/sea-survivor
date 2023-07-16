@@ -22,7 +22,7 @@ func damage(amount: float):
 
 
 func heal(amount: float):
-	current_health = min(current_health + amount, current_health)
+	current_health = min(current_health + amount, max_health)
 	health_changed.emit()
 
 
