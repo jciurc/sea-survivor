@@ -83,8 +83,10 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 
 
 func on_arena_difficulty_increased(difficulty: int):
-	# difficulty increases every 5 seconds
-	var is_fifteen_second_interval = (difficulty % 3) == 0
-	if is_fifteen_second_interval:
-		health_component.heal(1)
-		on_health_changed()
+	var health_regeneration_quantity = MetaProgression.get_upgrade_count("health_regeneration")
+	if health_regeneration_quantity > 0:
+		# difficulty increases every 5 seconds
+		var is_fifteen_second_interval = (difficulty % 3) == 0
+		if is_fifteen_second_interval:
+			health_component.heal(health_regeneration_quantity)
+			on_health_changed()
