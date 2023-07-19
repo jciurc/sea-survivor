@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_31b0r")
 id = "health_regeneration"
-max_quantity = 100
+max_quantity = 60
 experience_cost = 40
 title = "Health Regen"
-description = "Regenerates 1 HP every 15 seconds"
+description = "Regenerates 1 HP every 15 seconds per level"
