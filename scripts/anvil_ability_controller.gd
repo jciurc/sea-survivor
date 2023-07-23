@@ -14,15 +14,20 @@ func _ready():
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
+func spawn_anvil(starting_position: Vector2):
+	var random_position = GameEvents.get_random_spawn_position(starting_position, BASE_RANGE, COLLISION_OFFSET)
+	var anvil_instance = anvil_ability_scene.instantiate()
+	get_tree().get_first_node_in_group("foreground_layer").add_child(anvil_instance)
+	anvil_instance.position = random_position
+
+
 func on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if !player:
 		return
 
-	var random_position = GameEvents.get_random_spawn_position(player.global_position, BASE_RANGE, COLLISION_OFFSET)
-	var anvil_instance = anvil_ability_scene.instantiate()
-	get_tree().get_first_node_in_group("foreground_layer").add_child(anvil_instance)
-	anvil_instance.position = random_position
+	for i in anvil_count:
+		spawn_anvil(player.global_position)
 
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
