@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_5kygh")
-id = "anvil_amount"
+id = "anvil_count"
 max_quantity = 5
-name = "Anvil Amount"
+name = "Anvil Count"
 description = "Adds an extra anvil"
