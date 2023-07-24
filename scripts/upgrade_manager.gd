@@ -26,7 +26,6 @@ func _ready():
 	upgrade_pool.add_item(upgrade_bubble, 10)
 	upgrade_pool.add_item(upgrade_sword_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
-	upgrade_pool.add_item(upgrade_anvil_count, 1000)
 
 	experience_manager.level_up.connect(on_level_up)
 
@@ -55,6 +54,9 @@ func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
 
 	if chosen_upgrade.id == upgrade_bubble.id:
 		upgrade_pool.add_item(upgrade_firerate, 10)
+
+	if chosen_upgrade.id == upgrade_anvil.id:
+		upgrade_pool.add_item(upgrade_anvil_count, 10)
 
 
 func pick_upgrades():
