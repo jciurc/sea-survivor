@@ -27,7 +27,7 @@ func on_timer_timeout():
 		return
 
 	for i in anvil_count:
-		var random_delay = randf_range(0.1, 0.6)
+		var random_delay = randf_range(0.02, 0.2)
 		await get_tree().create_timer(random_delay).timeout
 		spawn_anvil(player.global_position)
 
