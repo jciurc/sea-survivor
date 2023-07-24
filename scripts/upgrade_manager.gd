@@ -45,18 +45,19 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 		if current_quantity == upgrade.max_quantity:
 			upgrade_pool.remove_item(upgrade)
 
+	update_upgrade_pool(upgrade)
 	GameEvents.emit_ability_upgrade_added(upgrade, current_upgrades)
 
 
 func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
-	if chosen_upgrade.id == upgrade_axe.id:
+	if chosen_upgrade.id == upgrade_axe.id and !upgrade_pool.get(upgrade_axe_damage.id):
 		upgrade_pool.add_item(upgrade_axe_damage, 10)
 
-	if chosen_upgrade.id == upgrade_bubble.id:
+	if chosen_upgrade.id == upgrade_bubble.id and !upgrade_pool.get(upgrade_firerate.id):
 		upgrade_pool.add_item(upgrade_firerate, 10)
 
-	if chosen_upgrade.id == upgrade_anvil.id:
-		upgrade_pool.add_item(upgrade_anvil_count, 10)
+	if chosen_upgrade.id == upgrade_anvil.id and !upgrade_pool.get(upgrade_anvil_count.id):
+		upgrade_pool.add_item(upgrade_anvil_count, 100)
 
 
 func pick_upgrades():
