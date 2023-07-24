@@ -16,6 +16,7 @@ var upgrade_axe_damage = preload("res://resources/upgrades/axe_damage.tres")
 var upgrade_sword_damage = preload("res://resources/upgrades/sword_damage.tres")
 var upgrade_firerate = preload("res://resources/upgrades/firerate.tres")
 var upgrade_player_speed = preload("res://resources/upgrades/player_speed.tres")
+var upgrade_anvil_count = preload("res://resources/upgrades/anvil_count.tres")
 
 
 func _ready():
@@ -25,6 +26,7 @@ func _ready():
 	upgrade_pool.add_item(upgrade_bubble, 10)
 	upgrade_pool.add_item(upgrade_sword_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
+	upgrade_pool.add_item(upgrade_anvil_count, 1000)
 
 	experience_manager.level_up.connect(on_level_up)
 
