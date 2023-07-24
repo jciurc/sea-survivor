@@ -1,6 +1,6 @@
 extends Node
 
-const BASE_RANGE := 100
+const BASE_RANGE := 60
 const COLLISION_OFFSET := -20 # allow ability to spawn slightly out of bounds
 const BASE_ANVIL_COUNT := 1
 
