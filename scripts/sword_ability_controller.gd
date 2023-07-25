@@ -7,7 +7,7 @@ const MAX_RANGE = 150
 var base_damage = 5
 var damage_percent = 1
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	$Timer.timeout.connect(on_timer_timeout)
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
