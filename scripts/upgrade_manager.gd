@@ -31,12 +31,13 @@ func _ready():
 
 
 func apply_upgrade(upgrade: AbilityUpgrade):
-	var has_upgrade = current_upgrades.has(upgrade.id)
-	if !has_upgrade:
+	if !current_upgrades.has(upgrade.id):
 		current_upgrades[upgrade.id] = {
 			'resource': upgrade,
 			'quantity': 1
 		}
+
+		update_upgrade_pool(upgrade.id)
 	else :
 		current_upgrades[upgrade.id].quantity += 1
 
@@ -45,19 +46,18 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 		if current_quantity == upgrade.max_quantity:
 			upgrade_pool.remove_item(upgrade)
 
-	update_upgrade_pool(upgrade)
 	GameEvents.emit_ability_upgrade_added(upgrade, current_upgrades)
 
 
-func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
-	if chosen_upgrade.id == upgrade_axe.id and !upgrade_pool.get(upgrade_axe_damage.id):
+func update_upgrade_pool(upgrade_id: String):
+	if upgrade_id == upgrade_axe.id:
 		upgrade_pool.add_item(upgrade_axe_damage, 10)
 
-	if chosen_upgrade.id == upgrade_bubble.id and !upgrade_pool.get(upgrade_firerate.id):
+	if upgrade_id == upgrade_bubble.id:
 		upgrade_pool.add_item(upgrade_firerate, 10)
 
-	if chosen_upgrade.id == upgrade_anvil.id and !upgrade_pool.get(upgrade_anvil_count.id):
-		upgrade_pool.add_item(upgrade_anvil_count, 100)
+	if upgrade_id == upgrade_anvil.id:
+		upgrade_pool.add_item(upgrade_anvil_count, 10)
 
 
 func pick_upgrades():
