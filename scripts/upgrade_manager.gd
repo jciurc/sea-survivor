@@ -8,7 +8,7 @@ var current_upgrades = {}
 var upgrade_pool: WeightedTable = WeightedTable.new()
 
 var upgrade_axe = preload("res://resources/upgrades/axe.tres")
-var upgrade_sword = preload("res://resources/upgrades/sword.tres")
+var upgrade_sword = preload("res://resources/upgrades/sword_count.tres")
 var upgrade_anvil = preload("res://resources/upgrades/anvil.tres")
 var upgrade_bubble = preload("res://resources/upgrades/bubble.tres")
 
