@@ -22,7 +22,7 @@ func _ready():
 
 
 func on_timer_timeout():
-	for i in range(0, spawn_count):
+	for i in spawn_count:
 		spawn_enemy()
 
 
@@ -36,6 +36,9 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 
 	if arena_difficulty == 10:
 		enemy_table.add_item(bat_enemy_scene, 6)
+
+	if (arena_difficulty % 6) == 0:
+		spawn_count = spawn_count + 1
 
 
 func spawn_enemy():
