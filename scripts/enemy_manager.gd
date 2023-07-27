@@ -38,7 +38,7 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.add_item(bat_enemy_scene, 6)
 
 	if (arena_difficulty % 6) == 0:
-		spawn_count = spawn_count + 1
+		spawn_count += 1
 
 
 func spawn_enemy():
