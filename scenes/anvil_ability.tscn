@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfnuw2pmeycsp"]
+[gd_scene load_steps=12 format=3 uid="uid://cfnuw2pmeycsp"]
 
 [ext_resource type="Script" path="res://scripts/anvil_ability.gd" id="1_6psrh"]
 [ext_resource type="Texture2D" uid="uid://c0sqcvs41mc6t" path="res://assets/items/anvil.png" id="2_lvpbb"]
@@ -132,6 +132,13 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_e6sfk"]
 radius = 24.0
 
+[sub_resource type="Curve" id="Curve_4rb8a"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.208251, 1), 0.0, 0.0, 0, 0, Vector2(0.889325, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.08035, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_uchei"]
+curve = SubResource("Curve_4rb8a")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k8g8o"]
 emission_shape = 1
 emission_sphere_radius = 6.0
@@ -142,6 +149,9 @@ initial_velocity_min = 150.0
 initial_velocity_max = 250.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
+damping_min = 600.0
+damping_max = 700.0
+scale_curve = SubResource("CurveTexture_uchei")
 
 [node name="AnvilAbility" type="Node2D"]
 script = ExtResource("1_6psrh")
@@ -168,8 +178,10 @@ shape = SubResource("CircleShape2D_e6sfk")
 disabled = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 30
 process_material = SubResource("ParticleProcessMaterial_k8g8o")
 texture = ExtResource("4_jw13j")
+lifetime = 0.3
 explosiveness = 0.9
 fixed_fps = 0
 interpolate = false
