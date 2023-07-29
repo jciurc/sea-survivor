@@ -55,6 +55,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GPUParticles2D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_4cnsk"]
 resource_name = "default"
@@ -122,15 +134,24 @@ tracks/4/keys = {
 "method": &"queue_free"
 }]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GPUParticles2D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.19),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p1v17"]
 _data = {
 "RESET": SubResource("Animation_qpwa3"),
 "default": SubResource("Animation_4cnsk")
 }
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_e6sfk"]
-radius = 24.0
 
 [sub_resource type="Gradient" id="Gradient_24jow"]
 interpolation_mode = 1
@@ -149,7 +170,7 @@ curve = SubResource("Curve_4rb8a")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k8g8o"]
 emission_shape = 1
-emission_sphere_radius = 6.0
+emission_sphere_radius = 4.0
 particle_flag_disable_z = true
 spread = 180.0
 gravity = Vector3(0, 0, 0)
@@ -160,8 +181,13 @@ orbit_velocity_max = 0.0
 damping_min = 600.0
 damping_max = 700.0
 angle_max = 360.0
+scale_min = 0.5
+scale_max = 0.5
 scale_curve = SubResource("CurveTexture_uchei")
 color_initial_ramp = SubResource("GradientTexture1D_gdmfo")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e6sfk"]
+radius = 24.0
 
 [node name="AnvilAbility" type="Node2D"]
 script = ExtResource("1_6psrh")
@@ -171,6 +197,17 @@ autoplay = "default"
 libraries = {
 "": SubResource("AnimationLibrary_p1v17")
 }
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_k8g8o")
+texture = ExtResource("4_jw13j")
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.9
+fixed_fps = 0
+interpolate = false
 
 [node name="Visuals" type="Node2D" parent="."]
 position = Vector2(0, -7)
@@ -186,14 +223,3 @@ damage = 20
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_e6sfk")
 disabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-emitting = false
-amount = 30
-process_material = SubResource("ParticleProcessMaterial_k8g8o")
-texture = ExtResource("4_jw13j")
-lifetime = 0.3
-one_shot = true
-explosiveness = 0.9
-fixed_fps = 0
-interpolate = false
