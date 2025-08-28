@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cccnbkn07ukg4"]
 
-[ext_resource type="Script" path="res://scripts/vignette.gd" id="1_rer5i"]
-[ext_resource type="Shader" path="res://resources/vignette.gdshader" id="1_ulrry"]
+[ext_resource type="Script" uid="uid://bmyw4fnjswa8d" path="res://scripts/vignette.gd" id="1_rer5i"]
+[ext_resource type="Shader" uid="uid://c8kafq2umcppk" path="res://resources/vignette.gdshader" id="1_ulrry"]
 
 [sub_resource type="Animation" id="Animation_27vqh"]
 length = 0.001
@@ -61,8 +61,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_62axw"]
 _data = {
-"RESET": SubResource("Animation_27vqh"),
-"hit": SubResource("Animation_c2sej")
+&"RESET": SubResource("Animation_27vqh"),
+&"hit": SubResource("Animation_c2sej")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kv3k4"]

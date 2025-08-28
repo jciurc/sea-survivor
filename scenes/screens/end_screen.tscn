@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c0jokx36cm2ty"]
 
-[ext_resource type="Script" path="res://scripts/end_screen.gd" id="1_mvg4q"]
-[ext_resource type="PackedScene" uid="uid://bepkdatl0ay2n" path="res://scenes/sound_button.tscn" id="2_jchbj"]
+[ext_resource type="Script" uid="uid://dp7cirof8547v" path="res://scripts/end_screen.gd" id="1_mvg4q"]
+[ext_resource type="PackedScene" path="res://scenes/sound_button.tscn" id="2_jchbj"]
 [ext_resource type="AudioStream" uid="uid://vestg7hkbhih" path="res://assets/audio/jingles_victory.ogg" id="2_q4aw2"]
 [ext_resource type="AudioStream" uid="uid://c6hjf7pjghnhv" path="res://assets/audio/jingles_defeat.ogg" id="3_oi0to"]
 
@@ -56,9 +56,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l3hhj"]
 _data = {
-"RESET": SubResource("Animation_8ajv4"),
-"in": SubResource("Animation_shp6i"),
-"out": SubResource("Animation_8htix")
+&"RESET": SubResource("Animation_8ajv4"),
+&"in": SubResource("Animation_shp6i"),
+&"out": SubResource("Animation_8htix")
 }
 
 [node name="EndScreen" type="CanvasLayer"]

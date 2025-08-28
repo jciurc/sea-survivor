@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://o13swfrg5rvt"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_53hyh"]
+[ext_resource type="Script" uid="uid://b0rmvabdbu18x" path="res://scripts/player.gd" id="1_53hyh"]
 [ext_resource type="PackedScene" uid="uid://be8gdavu11763" path="res://scenes/components/health_component.tscn" id="2_78vae"]
 [ext_resource type="PackedScene" uid="uid://dlyuh32uoepa2" path="res://scenes/components/random_stream_player_2d_component.tscn" id="2_g0ufy"]
 [ext_resource type="PackedScene" uid="uid://dx6h3e0hvpq43" path="res://scenes/components/velocity_component.tscn" id="2_j0bcq"]
@@ -96,9 +96,9 @@ resource_name = "walk"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2hlsy"]
 _data = {
-"RESET": SubResource("Animation_auwd3"),
-"idle": SubResource("Animation_xoilf"),
-"walk": SubResource("Animation_iyd1q")
+&"RESET": SubResource("Animation_auwd3"),
+&"idle": SubResource("Animation_xoilf"),
+&"walk": SubResource("Animation_iyd1q")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uem7o"]

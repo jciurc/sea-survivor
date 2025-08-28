@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://bqysv1pk13n3a"]
 
 [ext_resource type="PackedScene" uid="uid://duoov7ql7ttf" path="res://scenes/axe_ability_controller.tscn" id="1_fcpjm"]
-[ext_resource type="Script" path="res://scripts/ability.gd" id="1_kepau"]
+[ext_resource type="Script" uid="uid://cl8rm6gq4o03h" path="res://scripts/ability.gd" id="1_kepau"]
 
 [resource]
 script = ExtResource("1_kepau")

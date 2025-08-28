@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7ptgqjvyqe82"]
 
-[ext_resource type="Script" path="res://scripts/axe_ability.gd" id="1_enaqs"]
+[ext_resource type="Script" uid="uid://d1tkbuxwnuffk" path="res://scripts/axe_ability.gd" id="1_enaqs"]
 [ext_resource type="Texture2D" uid="uid://dxnfj734kpea" path="res://assets/items/axe.png" id="1_nkrnu"]
 [ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/components/hitbox_component.tscn" id="3_hwjfc"]
 
@@ -41,8 +41,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s66u3"]
 _data = {
-"RESET": SubResource("Animation_n6lwn"),
-"default": SubResource("Animation_34ljr")
+&"RESET": SubResource("Animation_n6lwn"),
+&"default": SubResource("Animation_34ljr")
 }
 
 [node name="AxeAbility" type="Node2D"]

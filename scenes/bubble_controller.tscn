@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rvoj73wqrdhe"]
 
-[ext_resource type="Script" path="res://scripts/bullet_manager.gd" id="1_pog4o"]
-[ext_resource type="PackedScene" uid="uid://pgtw4d63fqgh" path="res://scenes/bubble.tscn" id="2_afimu"]
+[ext_resource type="Script" uid="uid://b5vxrtjy2wwn1" path="res://scripts/bullet_manager.gd" id="1_pog4o"]
+[ext_resource type="PackedScene" uid="uid://yo1vb5ycucyn" path="res://scenes/bubble.tscn" id="2_afimu"]
 
 [node name="BulletManager" type="Node"]
 script = ExtResource("1_pog4o")

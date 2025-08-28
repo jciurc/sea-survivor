@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://yo1vb5ycucyn"]
 
 [ext_resource type="Texture2D" uid="uid://bvomk1a4dvnv5" path="res://assets/characters/bullet.png" id="1_bju1c"]
-[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_tn6be"]
+[ext_resource type="Script" uid="uid://c51ybu1502p1b" path="res://scripts/bullet.gd" id="1_tn6be"]
 [ext_resource type="PackedScene" uid="uid://y2rha2twxcrp" path="res://scenes/components/hitbox_component.tscn" id="3_itc76"]
 
 [sub_resource type="Animation" id="Animation_h7q20"]
@@ -102,9 +102,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_irgov"]
 _data = {
-"RESET": SubResource("Animation_h7q20"),
-"despawn": SubResource("Animation_jklj8"),
-"spawn": SubResource("Animation_4vnnl")
+&"RESET": SubResource("Animation_h7q20"),
+&"despawn": SubResource("Animation_jklj8"),
+&"spawn": SubResource("Animation_4vnnl")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hstbq"]

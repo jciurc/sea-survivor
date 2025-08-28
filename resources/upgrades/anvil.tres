@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://d2d3x63of38uh"]
 
 [ext_resource type="PackedScene" uid="uid://c8v0310m32fsw" path="res://scenes/anvil_ability_controller.tscn" id="1_jgr8n"]
-[ext_resource type="Script" path="res://scripts/ability.gd" id="2_j6wna"]
+[ext_resource type="Script" uid="uid://cl8rm6gq4o03h" path="res://scripts/ability.gd" id="2_j6wna"]
 
 [resource]
 script = ExtResource("2_j6wna")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://c7i6x62i6wfwg"]
 
-[ext_resource type="Script" path="res://scripts/meta_upgrade_card.gd" id="1_f1vqw"]
+[ext_resource type="Script" uid="uid://dybpx66lhnvkv" path="res://scripts/meta_upgrade_card.gd" id="1_f1vqw"]
 [ext_resource type="PackedScene" uid="uid://u4138lh7mdks" path="res://scenes/components/random_stream_player_component.tscn" id="2_4ac3w"]
 [ext_resource type="AudioStream" uid="uid://scrooqg4tncl" path="res://assets/audio/switch1.ogg" id="3_36ed5"]
 [ext_resource type="AudioStream" uid="uid://b8lr3uonqg8dk" path="res://assets/audio/switch2.ogg" id="4_ntoe4"]
@@ -126,9 +126,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_em67k"]
 _data = {
-"RESET": SubResource("Animation_v1jfm"),
-"in": SubResource("Animation_l6obm"),
-"selected": SubResource("Animation_uexac")
+&"RESET": SubResource("Animation_v1jfm"),
+&"in": SubResource("Animation_l6obm"),
+&"selected": SubResource("Animation_uexac")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c33ax"]
