@@ -65,10 +65,10 @@ script = ExtResource("1_4hn3q")
 upgrade_card_scene = ExtResource("1_e25vh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "in"
 libraries = {
-"": SubResource("AnimationLibrary_l3hhj")
+&"": SubResource("AnimationLibrary_l3hhj")
 }
+autoplay = "in"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
