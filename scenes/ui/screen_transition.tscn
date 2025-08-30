@@ -93,7 +93,7 @@ script = ExtResource("1_alp6i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_0drga")
+&"": SubResource("AnimationLibrary_0drga")
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
