@@ -8,9 +8,6 @@ func _ready():
 	%UpgradesButton.pressed.connect(on_upgrades_pressed)
 	%OptionsButton.pressed.connect(on_options_pressed)
 	%QuitButton.pressed.connect(on_quit_pressed)
-	
-	if is_inside_tree():
-		get_tree().paused = false
 
 
 func on_play_pressed():

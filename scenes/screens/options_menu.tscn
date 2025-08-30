@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dltvayg33t56x"]
 
 [ext_resource type="Script" uid="uid://moatbcy5jw5o" path="res://scripts/options_menu.gd" id="1_vqiv7"]
-[ext_resource type="PackedScene" path="res://scenes/sound_button.tscn" id="2_dkjlv"]
+[ext_resource type="PackedScene" uid="uid://otds25nkigwg" path="res://scenes/sound_button.tscn" id="2_dkjlv"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 layer = 2

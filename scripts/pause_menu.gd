@@ -54,11 +54,6 @@ func on_options_pressed():
 	await ScreenTransition.transitioned_halfway
 	var options_menu_instance = options_menu_scene.instantiate()
 	add_child(options_menu_instance)
-	options_menu_instance.back_pressed.connect(on_options_back_pressed.bind(options_menu_instance))
-
-
-func on_options_back_pressed(options_menu: Node):
-	options_menu.queue_free()
 
 
 func on_quit_pressed():

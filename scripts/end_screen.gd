@@ -29,9 +29,7 @@ func play_jingle(defeat: bool = false):
 
 
 func on_continue_pressed():
-	ScreenTransition.transition_to_scene("res://scenes/screens/meta_menu.tscn")
-	await ScreenTransition.transitioned_halfway
-	get_tree().paused = false
+	ScreenTransition.transition_to_scene("res://scenes/screens/main_game.tscn")
 
 
 func on_quit_pressed():
