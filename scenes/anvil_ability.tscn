@@ -191,21 +191,21 @@ radius = 24.0
 script = ExtResource("1_6psrh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "default"
 libraries = {
-"": SubResource("AnimationLibrary_p1v17")
+&"": SubResource("AnimationLibrary_p1v17")
 }
+autoplay = "default"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 20
-process_material = SubResource("ParticleProcessMaterial_k8g8o")
 texture = ExtResource("4_jw13j")
 lifetime = 0.2
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 0
 interpolate = false
+process_material = SubResource("ParticleProcessMaterial_k8g8o")
 
 [node name="Visuals" type="Node2D" parent="."]
 position = Vector2(0, -7)
@@ -215,7 +215,7 @@ position = Vector2(0, -6)
 texture = ExtResource("2_lvpbb")
 
 [node name="HitboxComponent" parent="." instance=ExtResource("2_w0i53")]
-damage = 20
+damage = 30
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(0, -3)
