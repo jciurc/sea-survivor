@@ -3,7 +3,7 @@ class_name ArenaTimeManager
 
 signal arena_difficulty_increased(arena_difficulty: int)
 
-const DIFFICULTY_INTERVAL = 5
+const DIFFICULTY_INTERVAL = 5 # in seconds
 
 @export var end_screen_scene: PackedScene
 
@@ -23,8 +23,8 @@ func _process(delta):
 		arena_difficulty_increased.emit(arena_difficulty)
 
 
-func get_time_elapsed():
-	return arena_timer.wait_time - arena_timer.time_left
+func get_time_remaining():
+	return max(ceil(arena_timer.time_left), 0)
 
 
 func on_arena_timer_timeout():
