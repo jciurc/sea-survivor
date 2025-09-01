@@ -2,6 +2,9 @@
 
 A simple Survivors like prototype exploring the Godot 4 engine. 
 
+# Installation 
+See [Release](https://github.com/jciurc/sea-survivor/releases) to try it out.
+
 Menu
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/371ef517-65e0-495f-8e5b-39c2f010cd7d" />
 
